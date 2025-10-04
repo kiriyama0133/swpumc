@@ -7,12 +7,20 @@ build_property.AvaloniaNameGeneratorFilterByNamespace = *
 build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassName
 build_property.AvaloniaNameGeneratorAttachDevTools = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = swpumc
 build_property.ProjectDir = C:\Users\20742\source\repos\SWPUMC\
@@ -27,6 +35,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/20742/source/repos/SWPUMC/Controls/BorderTab/BorderTab.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/20742/source/repos/SWPUMC/Controls/DownloadCenter/DownloadCenter.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/20742/source/repos/SWPUMC/Controls/GameLauncher/GameLauncher.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -36,7 +47,13 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/20742/source/repos/SWPUMC/Controls/InfoView/Loginform/SkinLoginForm.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/20742/source/repos/SWPUMC/Controls/InfoView/OfflinePlayerView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/20742/source/repos/SWPUMC/Controls/Unlineform/Unlineform.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/20742/source/repos/SWPUMC/Controls/VersionCard/VersionCard.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/20742/source/repos/SWPUMC/Pages/AnimationTest/AnimationTestPage.axaml]
@@ -45,10 +62,13 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/20742/source/repos/SWPUMC/Pages/Dashboard/DashboardPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/20742/source/repos/SWPUMC/Pages/JavaConfig/JavaConfigPage.axaml]
+[C:/Users/20742/source/repos/SWPUMC/Pages/DownloadCenter/DownloadCenterPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/20742/source/repos/SWPUMC/Pages/Main/MainPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/20742/source/repos/SWPUMC/Pages/ModpackDownload/ModpackDownloadPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/20742/source/repos/SWPUMC/Views/MainWindow.axaml]

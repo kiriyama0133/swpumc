@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:services\\launchermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\assets\\json\\usermanagement.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:assets\\json\\usermanagement.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -25,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\assets\\json\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:assets\\json\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\assets\\img\\minecraft_light-32x32.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:assets\\img\\minecraft_light-32x32.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\utils\\markdownannouncementparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -165,18 +157,6 @@
       "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:pages\\dashboard\\dashboardpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\pages\\javaconfig\\javaconfigpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:pages\\javaconfig\\javaconfigpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\pages\\javaconfig\\javaconfigpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:pages\\javaconfig\\javaconfigpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\pages\\javaconfig\\javaconfigpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:pages\\javaconfig\\javaconfigpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\services\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:services\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -211,6 +191,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\utils\\ianimationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:utils\\ianimationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\JavaConfig\\JavaConfigPageViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\JavaConfig\\JavaConfigPageViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\JavaConfig\\JavaConfigPage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\JavaConfig\\JavaConfigPage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\JavaConfig\\JavaConfigPage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\JavaConfig\\JavaConfigPage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -220,7 +212,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -236,6 +228,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -244,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "OfflineAccounts.json",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\JSON\\OfflineAccounts.json",
               "RelativeDocumentMoniker": "Assets\\JSON\\OfflineAccounts.json",
@@ -252,12 +248,11 @@
               "RelativeToolTip": "Assets\\JSON\\OfflineAccounts.json",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-02T14:34:18.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T14:34:18.472Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MicrosoftAccounts.json",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\JSON\\MicrosoftAccounts.json",
               "RelativeDocumentMoniker": "Assets\\JSON\\MicrosoftAccounts.json",
@@ -265,12 +260,11 @@
               "RelativeToolTip": "Assets\\JSON\\MicrosoftAccounts.json",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-02T14:34:17.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T14:34:17.449Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "AppSettings.json",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\JSON\\AppSettings.json",
               "RelativeDocumentMoniker": "Assets\\JSON\\AppSettings.json",
@@ -278,12 +272,11 @@
               "RelativeToolTip": "Assets\\JSON\\AppSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-30T07:23:32.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T07:23:32.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserManagement.json",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\JSON\\UserManagement.json",
               "RelativeDocumentMoniker": "Assets\\JSON\\UserManagement.json",
@@ -291,8 +284,7 @@
               "RelativeToolTip": "Assets\\JSON\\UserManagement.json",
               "ViewState": "AgIAAAMAAAAAAAAAAADwvw0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-30T07:23:32.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T07:23:32.976Z"
             },
             {
               "$type": "Document",
@@ -302,38 +294,14 @@
               "RelativeDocumentMoniker": "Services\\LauncherManager.cs",
               "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\LauncherManager.cs",
               "RelativeToolTip": "Services\\LauncherManager.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAADwv7cAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-02T07:24:59.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
-              "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\IMG\\minecraft_light-32x32.ico",
-              "RelativeDocumentMoniker": "Assets\\IMG\\minecraft_light-32x32.ico",
-              "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\IMG\\minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
-              "RelativeToolTip": "Assets\\IMG\\minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
-              "WhenOpened": "2025-10-02T14:34:58.046Z",
-              "EditorCaption": " - Icon [32x32, 32 \u4F4D, BMP]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.axaml",
-              "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\App.axaml",
-              "RelativeDocumentMoniker": "App.axaml",
-              "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\App.axaml",
-              "RelativeToolTip": "App.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-02T14:56:37.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "ConfigService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\ConfigService.cs",
               "RelativeDocumentMoniker": "Services\\ConfigService.cs",
@@ -341,12 +309,11 @@
               "RelativeToolTip": "Services\\ConfigService.cs",
               "ViewState": "AgIAAK8AAAAAAAAAAAAzwAIBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T13:35:18.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T13:35:18.014Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "AccountConfigManager.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\AccountConfigManager.cs",
               "RelativeDocumentMoniker": "Services\\AccountConfigManager.cs",
@@ -354,12 +321,11 @@
               "RelativeToolTip": "Services\\AccountConfigManager.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAIwHkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T14:31:55.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T14:31:55.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "DialogService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\DialogService.cs",
               "RelativeDocumentMoniker": "Services\\DialogService.cs",
@@ -367,12 +333,11 @@
               "RelativeToolTip": "Services\\DialogService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T14:32:14.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T14:32:14.557Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "MarkdownAnnouncementParser.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\MarkdownAnnouncementParser.cs",
               "RelativeDocumentMoniker": "Utils\\MarkdownAnnouncementParser.cs",
@@ -380,12 +345,11 @@
               "RelativeToolTip": "Utils\\MarkdownAnnouncementParser.cs",
               "ViewState": "AgIAAFABAAAAAAAAAAAiwMcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T06:52:31.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T06:52:31.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "IBackgroundService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\IBackgroundService.cs",
               "RelativeDocumentMoniker": "Services\\IBackgroundService.cs",
@@ -393,12 +357,11 @@
               "RelativeToolTip": "Services\\IBackgroundService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T14:32:12.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T14:32:12.711Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "AuthenticationHttpHandler.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\AuthenticationHttpHandler.cs",
               "RelativeDocumentMoniker": "Services\\AuthenticationHttpHandler.cs",
@@ -406,12 +369,11 @@
               "RelativeToolTip": "Services\\AuthenticationHttpHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T14:32:00.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T14:32:00.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "JavaEnvironmentService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\JavaEnvironmentService.cs",
               "RelativeDocumentMoniker": "Services\\JavaEnvironmentService.cs",
@@ -419,12 +381,11 @@
               "RelativeToolTip": "Services\\JavaEnvironmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T07:22:57.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T07:22:57.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "IJavaEnvironmentService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\IJavaEnvironmentService.cs",
               "RelativeDocumentMoniker": "Services\\IJavaEnvironmentService.cs",
@@ -432,24 +393,22 @@
               "RelativeToolTip": "Services\\IJavaEnvironmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T07:22:55.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T07:22:55.454Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "InfoView.axaml",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Controls\\InfoView\\InfoView.axaml",
               "RelativeDocumentMoniker": "Controls\\InfoView\\InfoView.axaml",
               "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Controls\\InfoView\\InfoView.axaml",
               "RelativeToolTip": "Controls\\InfoView\\InfoView.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-30T15:03:13.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T15:03:13.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -457,12 +416,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T23:49:51.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T23:49:51.207Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "InfoView.axaml.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Controls\\InfoView\\InfoView.axaml.cs",
               "RelativeDocumentMoniker": "Controls\\InfoView\\InfoView.axaml.cs",
@@ -470,12 +428,11 @@
               "RelativeToolTip": "Controls\\InfoView\\InfoView.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T13:20:27.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T13:20:27.843Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "InfoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Controls\\InfoView\\InfoViewModel.cs",
               "RelativeDocumentMoniker": "Controls\\InfoView\\InfoViewModel.cs",
@@ -483,12 +440,11 @@
               "RelativeToolTip": "Controls\\InfoView\\InfoViewModel.cs",
               "ViewState": "AgIAAIwAAAAAAAAAAAAowMsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T13:20:41.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T13:20:41.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "App.axaml.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\App.axaml.cs",
               "RelativeDocumentMoniker": "App.axaml.cs",
@@ -496,12 +452,11 @@
               "RelativeToolTip": "App.axaml.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T01:05:18.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T01:05:18.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "swpumc.csproj",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\SWPUMC\\swpumc.csproj",
               "RelativeDocumentMoniker": "swpumc.csproj",
@@ -509,12 +464,11 @@
               "RelativeToolTip": "swpumc.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-29T12:51:42.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T12:51:42.07Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "NameScopeExtensions.cs",
               "DocumentMoniker": "C:\\Users\\20742\\AppData\\Local\\Temp\\.vsdbgsrc\\ad8f8d33fdb2996c977f1050bcd51270acf6e0748b834d04c5eb5e197442fd6e\\NameScopeExtensions.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ad8f8d33fdb2996c977f1050bcd51270acf6e0748b834d04c5eb5e197442fd6e\\NameScopeExtensions.cs",
@@ -522,12 +476,11 @@
               "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ad8f8d33fdb2996c977f1050bcd51270acf6e0748b834d04c5eb5e197442fd6e\\NameScopeExtensions.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAABSwD0AAAArAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T13:41:05.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T13:41:05.428Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "BindingExpressionGrammar.cs",
               "DocumentMoniker": "C:\\Users\\20742\\AppData\\Local\\Temp\\.vsdbgsrc\\07bfc682b89a33c219f63637af4dc310bac87ad332502b8957b351e8d54d7cbd\\BindingExpressionGrammar.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\07bfc682b89a33c219f63637af4dc310bac87ad332502b8957b351e8d54d7cbd\\BindingExpressionGrammar.cs",
@@ -535,12 +488,11 @@
               "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\07bfc682b89a33c219f63637af4dc310bac87ad332502b8957b351e8d54d7cbd\\BindingExpressionGrammar.cs",
               "ViewState": "AgIAABsCAAAAAAAAAABSwDUCAAABAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T14:13:47.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T14:13:47.206Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 22,
               "Title": "MarkdownRenderer.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\MarkdownRenderer.cs",
               "RelativeDocumentMoniker": "Utils\\MarkdownRenderer.cs",
@@ -548,12 +500,11 @@
               "RelativeToolTip": "Utils\\MarkdownRenderer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T07:27:39.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T07:27:39.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "MarkdownToControlConverter.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\MarkdownToControlConverter.cs",
               "RelativeDocumentMoniker": "Utils\\MarkdownToControlConverter.cs",
@@ -561,12 +512,11 @@
               "RelativeToolTip": "Utils\\MarkdownToControlConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T07:28:19.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T07:28:19.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 23,
               "Title": "MarkdownASTRenderer.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\MarkdownASTRenderer.cs",
               "RelativeDocumentMoniker": "Utils\\MarkdownASTRenderer.cs",
@@ -574,24 +524,22 @@
               "RelativeToolTip": "Utils\\MarkdownASTRenderer.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAPBywAgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T07:18:27.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T07:18:27.586Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 24,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Views\\MainWindow.axaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.axaml",
               "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Views\\MainWindow.axaml",
               "RelativeToolTip": "Views\\MainWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-29T19:55:32.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T19:55:32.655Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 29,
               "Title": "SecondOrder.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\animation\\SecondOrder.cs",
               "RelativeDocumentMoniker": "Utils\\animation\\SecondOrder.cs",
@@ -599,12 +547,11 @@
               "RelativeToolTip": "Utils\\animation\\SecondOrder.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAiwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T01:16:08.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T01:16:08.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 28,
               "Title": "Vec2.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\animation\\Vec2.cs",
               "RelativeDocumentMoniker": "Utils\\animation\\Vec2.cs",
@@ -612,12 +559,11 @@
               "RelativeToolTip": "Utils\\animation\\Vec2.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAmwGQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T01:17:07.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T01:17:07.102Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 33,
               "Title": "AnimationManager.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\AnimationManager.cs",
               "RelativeDocumentMoniker": "Utils\\AnimationManager.cs",
@@ -625,12 +571,11 @@
               "RelativeToolTip": "Utils\\AnimationManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T00:53:39.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T00:53:39.885Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 26,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
@@ -638,24 +583,22 @@
               "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
               "ViewState": "AgIAAH8AAAAAAAAAAAA1wBAAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T21:37:59.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T21:37:59.835Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 27,
               "Title": "DashboardPage.axaml",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\Dashboard\\DashboardPage.axaml",
               "RelativeDocumentMoniker": "Pages\\Dashboard\\DashboardPage.axaml",
               "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\Dashboard\\DashboardPage.axaml",
               "RelativeToolTip": "Pages\\Dashboard\\DashboardPage.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-29T14:43:50.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T14:43:50.479Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 25,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Views\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "Views\\MainWindow.axaml.cs",
@@ -663,12 +606,11 @@
               "RelativeToolTip": "Views\\MainWindow.axaml.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAywFMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T05:21:52.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T05:21:52.413Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 32,
               "Title": "AnimationService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\AnimationService.cs",
               "RelativeDocumentMoniker": "Utils\\AnimationService.cs",
@@ -676,12 +618,11 @@
               "RelativeToolTip": "Utils\\AnimationService.cs",
               "ViewState": "AgIAABMBAAAAAAAAAAA1wDABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T22:19:23.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T22:19:23.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 31,
               "Title": "Easings.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\animation\\Easings.cs",
               "RelativeDocumentMoniker": "Utils\\animation\\Easings.cs",
@@ -689,12 +630,11 @@
               "RelativeToolTip": "Utils\\animation\\Easings.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAiwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T01:15:07.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T01:15:07.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 30,
               "Title": "Mathf.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\animation\\Mathf.cs",
               "RelativeDocumentMoniker": "Utils\\animation\\Mathf.cs",
@@ -702,24 +642,22 @@
               "RelativeToolTip": "Utils\\animation\\Mathf.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T01:15:31.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T01:15:31.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 37,
               "Title": "MainPage.axaml",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\Main\\MainPage.axaml",
               "RelativeDocumentMoniker": "Pages\\Main\\MainPage.axaml",
               "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\Main\\MainPage.axaml",
               "RelativeToolTip": "Pages\\Main\\MainPage.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-28T02:52:00.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T02:52:00.498Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 34,
               "Title": "AnimationTestPage.axaml.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\AnimationTest\\AnimationTestPage.axaml.cs",
               "RelativeDocumentMoniker": "Pages\\AnimationTest\\AnimationTestPage.axaml.cs",
@@ -727,12 +665,11 @@
               "RelativeToolTip": "Pages\\AnimationTest\\AnimationTestPage.axaml.cs",
               "ViewState": "AgIAAJ4AAAAAAAAAAADwv6AAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T17:48:13.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T17:48:13.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 38,
               "Title": "DashboardPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\Dashboard\\DashboardPageViewModel.cs",
               "RelativeDocumentMoniker": "Pages\\Dashboard\\DashboardPageViewModel.cs",
@@ -740,12 +677,11 @@
               "RelativeToolTip": "Pages\\Dashboard\\DashboardPageViewModel.cs",
               "ViewState": "AgIAAFIBAAAAAAAAAAAIwCUBAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T14:43:52.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T14:43:52.961Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 35,
               "Title": "AnimationTestPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\AnimationTest\\AnimationTestPageViewModel.cs",
               "RelativeDocumentMoniker": "Pages\\AnimationTest\\AnimationTestPageViewModel.cs",
@@ -753,12 +689,11 @@
               "RelativeToolTip": "Pages\\AnimationTest\\AnimationTestPageViewModel.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAkwEQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T17:59:50.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T17:59:50.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 36,
               "Title": "MainPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\Main\\MainPageViewModel.cs",
               "RelativeDocumentMoniker": "Pages\\Main\\MainPageViewModel.cs",
@@ -766,12 +701,11 @@
               "RelativeToolTip": "Pages\\Main\\MainPageViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T02:52:01.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T02:52:01.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "JavaConfigPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\JavaConfig\\JavaConfigPageViewModel.cs",
               "RelativeDocumentMoniker": "Pages\\JavaConfig\\JavaConfigPageViewModel.cs",
@@ -779,12 +713,11 @@
               "RelativeToolTip": "Pages\\JavaConfig\\JavaConfigPageViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T02:52:21.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T02:52:21.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 39,
               "Title": "HttpService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\HttpService.cs",
               "RelativeDocumentMoniker": "Services\\HttpService.cs",
@@ -792,24 +725,22 @@
               "RelativeToolTip": "Services\\HttpService.cs",
               "ViewState": "AgIAALEAAAAAAAAAAAAkwL8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T13:14:53.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T13:14:53.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 49,
               "Title": "JavaConfigPage.axaml",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\JavaConfig\\JavaConfigPage.axaml",
               "RelativeDocumentMoniker": "Pages\\JavaConfig\\JavaConfigPage.axaml",
               "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\JavaConfig\\JavaConfigPage.axaml",
               "RelativeToolTip": "Pages\\JavaConfig\\JavaConfigPage.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-28T02:52:20.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T02:52:20.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 50,
               "Title": "JavaConfigPage.axaml.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\JavaConfig\\JavaConfigPage.axaml.cs",
               "RelativeDocumentMoniker": "Pages\\JavaConfig\\JavaConfigPage.axaml.cs",
@@ -817,12 +748,11 @@
               "RelativeToolTip": "Pages\\JavaConfig\\JavaConfigPage.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T13:32:45.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T13:32:45.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 40,
               "Title": "AvatarApiService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\API\\AvatarApiService.cs",
               "RelativeDocumentMoniker": "Services\\API\\AvatarApiService.cs",
@@ -830,12 +760,11 @@
               "RelativeToolTip": "Services\\API\\AvatarApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvx4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T12:28:30.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T12:28:30.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 41,
               "Title": "ViewLocator.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\ViewLocator.cs",
               "RelativeDocumentMoniker": "ViewLocator.cs",
@@ -843,12 +772,11 @@
               "RelativeToolTip": "ViewLocator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T23:49:54.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T23:49:54.234Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 42,
               "Title": "BasePage.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\BasePage.cs",
               "RelativeDocumentMoniker": "BasePage.cs",
@@ -856,12 +784,11 @@
               "RelativeToolTip": "BasePage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T23:49:52.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T23:49:52.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 45,
               "Title": "Unlineform.axaml.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Controls\\Unlineform\\Unlineform.axaml.cs",
               "RelativeDocumentMoniker": "Controls\\Unlineform\\Unlineform.axaml.cs",
@@ -869,12 +796,11 @@
               "RelativeToolTip": "Controls\\Unlineform\\Unlineform.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T07:58:29.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T07:58:29.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 43,
               "Title": "UnlineformViewModel.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Controls\\Unlineform\\UnlineformViewModel.cs",
               "RelativeDocumentMoniker": "Controls\\Unlineform\\UnlineformViewModel.cs",
@@ -882,24 +808,22 @@
               "RelativeToolTip": "Controls\\Unlineform\\UnlineformViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T07:58:00.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T07:58:00.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 44,
               "Title": "Unlineform.axaml",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Controls\\Unlineform\\Unlineform.axaml",
               "RelativeDocumentMoniker": "Controls\\Unlineform\\Unlineform.axaml",
               "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Controls\\Unlineform\\Unlineform.axaml",
               "RelativeToolTip": "Controls\\Unlineform\\Unlineform.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-28T07:58:30.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-28T07:58:30.054Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 46,
               "Title": "MainPage.axaml.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Pages\\Main\\MainPage.axaml.cs",
               "RelativeDocumentMoniker": "Pages\\Main\\MainPage.axaml.cs",
@@ -907,12 +831,11 @@
               "RelativeToolTip": "Pages\\Main\\MainPage.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T23:30:10.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T23:30:10.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 47,
               "Title": "IAnimationService.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\IAnimationService.cs",
               "RelativeDocumentMoniker": "Utils\\IAnimationService.cs",
@@ -920,8 +843,7 @@
               "RelativeToolTip": "Utils\\IAnimationService.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAiwFsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T22:19:38.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T22:19:38.837Z"
             }
           ]
         }

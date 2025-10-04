@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\20742\\source\\repos\\swpumc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\services\\launchermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:services\\launchermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\utils\\markdownannouncementparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:utils\\markdownannouncementparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\services\\launchermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|solutionrelative:services\\launchermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D29A844-9E30-41B3-A22A-A8B398AB5207}|swpumc.csproj|c:\\users\\20742\\source\\repos\\swpumc\\services\\accountconfigmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -220,7 +220,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -244,31 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.axaml",
-              "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\App.axaml",
-              "RelativeDocumentMoniker": "App.axaml",
-              "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\App.axaml",
-              "RelativeToolTip": "App.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-02T14:56:37.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
-              "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\IMG\\minecraft_light-32x32.ico",
-              "RelativeDocumentMoniker": "Assets\\IMG\\minecraft_light-32x32.ico",
-              "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\IMG\\minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
-              "RelativeToolTip": "Assets\\IMG\\minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
-              "WhenOpened": "2025-10-02T14:34:58.046Z",
-              "EditorCaption": " - Icon [32x32, 32 \u4F4D, BMP]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "OfflineAccounts.json",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\JSON\\OfflineAccounts.json",
               "RelativeDocumentMoniker": "Assets\\JSON\\OfflineAccounts.json",
@@ -281,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MicrosoftAccounts.json",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\JSON\\MicrosoftAccounts.json",
               "RelativeDocumentMoniker": "Assets\\JSON\\MicrosoftAccounts.json",
@@ -294,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AppSettings.json",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\JSON\\AppSettings.json",
               "RelativeDocumentMoniker": "Assets\\JSON\\AppSettings.json",
@@ -307,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserManagement.json",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\JSON\\UserManagement.json",
               "RelativeDocumentMoniker": "Assets\\JSON\\UserManagement.json",
@@ -320,15 +296,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "LauncherManager.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\LauncherManager.cs",
               "RelativeDocumentMoniker": "Services\\LauncherManager.cs",
               "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Services\\LauncherManager.cs",
               "RelativeToolTip": "Services\\LauncherManager.cs",
-              "ViewState": "AgIAAMUDAAAAAAAAAAAuwMUDAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAKcAAAAAAAAAAADwv7cAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-02T07:24:59.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
+              "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\IMG\\minecraft_light-32x32.ico",
+              "RelativeDocumentMoniker": "Assets\\IMG\\minecraft_light-32x32.ico",
+              "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\Assets\\IMG\\minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
+              "RelativeToolTip": "Assets\\IMG\\minecraft_light-32x32.ico - Icon [32x32, 32 \u4F4D, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-10-02T14:34:58.046Z",
+              "EditorCaption": " - Icon [32x32, 32 \u4F4D, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.axaml",
+              "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\App.axaml",
+              "RelativeDocumentMoniker": "App.axaml",
+              "ToolTip": "C:\\Users\\20742\\source\\repos\\swpumc\\App.axaml",
+              "RelativeToolTip": "App.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-02T14:56:37.299Z",
               "EditorCaption": ""
             },
             {
@@ -372,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MarkdownAnnouncementParser.cs",
               "DocumentMoniker": "C:\\Users\\20742\\source\\repos\\swpumc\\Utils\\MarkdownAnnouncementParser.cs",
               "RelativeDocumentMoniker": "Utils\\MarkdownAnnouncementParser.cs",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MkMPJ+0V9VY=",
+  "dgSpecHash": "UJq4poVomvY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\20742\\source\\repos\\swpumc\\swpumc.csproj",
+  "projectFilePath": "C:\\Users\\20742\\source\\repos\\SWPUMC\\swpumc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\20742\\.nuget\\packages\\avalonia\\11.3.7\\avalonia.11.3.7.nupkg.sha512",
     "C:\\Users\\20742\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.25547.20250602\\avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",
