@@ -1,0 +1,108 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+             xmlns:suki="clr-namespace:SukiUI;assembly=SukiUI"
+             xmlns:converters="using:Avalonia.Data.Converters"
+             xmlns:utils="using:swpumc.Utils"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="700"
+             x:Class="swpumc.Controls.DownloadCenter.DownloadCenter">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        
+        <!-- 版本选择区域 -->
+        <sukiUi:GlassCard Grid.Row="0" 
+                          CornerRadius="15" 
+                          Padding="20"
+                          Margin="0,0,0,10">
+            <!-- 模组加载器选择区域 -->
+            <StackPanel Spacing="10">
+                <!-- Tab按钮区域 -->
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <Button Name="OptifineTabButton" 
+                            Content="Optifine" 
+                            Width="100" 
+                            Height="35"
+                            Command="{Binding SelectOptifineCommand}"/>
+                    <Button Name="FabricTabButton" 
+                            Content="Fabric" 
+                            Width="100" 
+                            Height="35"
+                            Command="{Binding SelectFabricCommand}"/>
+                    <Button Name="QuiltTabButton" 
+                            Content="Quilt" 
+                            Width="100" 
+                            Height="35"
+                            Command="{Binding SelectQuiltCommand}"/>
+                </StackPanel>
+                
+                <!-- 内容区域 -->
+                <Border Background="{DynamicResource SukiCardBackground}" 
+                        CornerRadius="8" 
+                        Padding="15"
+                        Height="300">
+                    <Grid>
+                        <!-- Optifine内容 -->
+                        <ListBox Name="OptifineListBox"
+                                 ItemsSource="{Binding OptifineVersions}"
+                                 SelectedItem="{Binding SelectedOptifineVersion}"
+                                 DisplayMemberBinding="{Binding DisplayName}"
+                                 MaxHeight="270"
+                                 SelectionMode="Single"
+                                 IsVisible="{Binding IsOptifineSelected}"/>
+                        
+                        <!-- Fabric内容 -->
+                        <ListBox Name="FabricListBox"
+                                 ItemsSource="{Binding FabricVersions}"
+                                 SelectedItem="{Binding SelectedFabricVersion}"
+                                 DisplayMemberBinding="{Binding DisplayName}"
+                                 MaxHeight="270"
+                                 SelectionMode="Single"
+                                 IsVisible="{Binding IsFabricSelected}"/>
+                        
+                        <!-- Quilt内容 -->
+                        <ListBox Name="QuiltListBox"
+                                 ItemsSource="{Binding QuiltVersions}"
+                                 SelectedItem="{Binding SelectedQuiltVersion}"
+                                 DisplayMemberBinding="{Binding DisplayName}"
+                                 MaxHeight="270"
+                                 SelectionMode="Single"
+                                 IsVisible="{Binding IsQuiltSelected}"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </sukiUi:GlassCard>
+        
+        <!-- 下载按钮区域 -->
+        <sukiUi:GlassCard Grid.Row="1" 
+                          CornerRadius="15" 
+                          Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- 下载按钮 -->
+                <Button Grid.Column="0" 
+                        Grid.ColumnSpan="3"
+                        Name="DownloadButton"
+                        Content="开始下载"
+                        Width="120"
+                        Height="40"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Command="{Binding DownloadCommand}"
+                        IsEnabled="{Binding CanDownload}"
+                        HorizontalAlignment="Center"/>
+            </Grid>
+        </sukiUi:GlassCard>
+    </Grid>
+</UserControl>

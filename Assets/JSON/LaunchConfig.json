@@ -1,0 +1,30 @@
+{
+  "lastUsedCore": "hide and seek",
+  "launchSettings": {
+    "memoryConfig": {
+      "minMemorySize": 3072,
+      "maxMemorySize": 8960
+    },
+    "windowConfig": {
+      "gameWidth": 1280,
+      "gameHeight": 720,
+      "isFullScreen": false
+    },
+    "serverConfig": {
+      "serverAddress": ""
+    },
+    "javaConfig": {
+      "javaPath": "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+      "javaEnvironments": [
+        "C:\\Program Files\\Java\\jdk-24",
+        "C:\\Program Files\\Java\\jdk-21",
+        "C:\\Program Files\\Microsoft\\jdk-11.0.20.101-hotspot"
+      ]
+    },
+    "advancedConfig": {
+      "customJvmArgs": "",
+      "customGameArgs": ""
+    }
+  },
+  "lastModified": "2025-10-04T19:42:34.4597956+08:00"
+}

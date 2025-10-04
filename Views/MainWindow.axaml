@@ -1,0 +1,131 @@
+<sukiUi:SukiWindow xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:swpumc.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+        xmlns:suki="clr-namespace:SukiUI;assembly=SukiUI"
+        xmlns:material="using:Material.Icons.Avalonia"
+        xmlns:local="using:swpumc"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="600"
+        x:Class="swpumc.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/IMG/minecraft_dark.png"
+        Title="swpumc"
+        Width="900" Height="600"
+        Background="White"
+        WindowStartupLocation="CenterScreen"
+        Opacity="1.0"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        ExtendClientAreaChromeHints="NoChrome"
+        SystemDecorations="None"
+        IsTitleBarVisible="False"
+        RootCornerRadius="12"
+        BackgroundStyle="Flat"
+	    BackgroundForceSoftwareRendering="True"
+        ShowInTaskbar="True"
+        CanResize="True"
+        BackgroundTransitionTime="1.0"
+        BackgroundTransitionsEnabled="True">
+
+    <sukiUi:SukiWindow.Styles>
+        <!-- SukiUI主题已在App.axaml中全局定义，无需重复包含 -->
+    </sukiUi:SukiWindow.Styles>
+
+    <sukiUi:SukiWindow.Hosts>
+        <sukiUi:SukiDialogHost Manager="{Binding DialogManager}"/>
+        <sukiUi:SukiToastHost Manager="{Binding ToastManager}"/>
+    </sukiUi:SukiWindow.Hosts>
+
+    <!-- 启动动画 -->
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+            <!-- 居中的内容Border，用于旋转动画和拖拽 -->
+            <Border Name="ContentBorder"
+                    Width="900" Height="600"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Background="{DynamicResource SukiCardBackground}"
+                    CornerRadius="12"
+                    RenderTransformOrigin="0.5,0.5">
+                
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+    
+                    <!-- 顶部状态栏 -->
+                    <local:BorderTab Grid.Row="0"
+                                    Name="StatusBar"/>
+
+                    <!-- SukiUI 侧边栏导航 -->
+                    <sukiUi:SukiSideMenu Grid.Row="1"
+                                    IsSearchEnabled="True" 
+                                    ItemsSource="{Binding NavigationPages}" 
+                                    SelectedItem="{Binding ActivePage}"
+                                    OpenPaneLength="200"
+                                    IsMenuExpanded="True"
+                                    HeaderMinHeight="50">
+            
+            
+            <!-- 导航项模板 -->
+            <sukiUi:SukiSideMenu.ItemTemplate>
+                <DataTemplate>
+                    <sukiUi:SukiSideMenuItem Classes="Compact" 
+                                            Header="{Binding Title}">
+                        <sukiUi:SukiSideMenuItem.Icon>
+                            <Canvas Width="30" Height="30">
+                                <material:MaterialIcon Kind="{Binding Icon}" 
+                                                      Width="30" 
+                                                      Height="30"
+                                                      Canvas.Left="0"
+                                                      Canvas.Top="0"/>
+                            </Canvas>
+                        </sukiUi:SukiSideMenuItem.Icon>
+                    </sukiUi:SukiSideMenuItem>
+                </DataTemplate>
+            </sukiUi:SukiSideMenu.ItemTemplate>
+            
+            <!-- 头部内容 -->
+            <sukiUi:SukiSideMenu.HeaderContent>
+                <StackPanel Margin="20" Spacing="10">
+                    <Image Width="60" Height="60" 
+                           Source="/Assets/IMG/minecraft_light.png"
+                           HorizontalAlignment="Center"/>
+                    <TextBlock Text="swpumc" 
+                               FontSize="18" 
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               Foreground="{DynamicResource SukiText}"/>
+                </StackPanel>
+            </sukiUi:SukiSideMenu.HeaderContent>
+            
+            <!-- 底部内容 -->
+            <sukiUi:SukiSideMenu.FooterContent>
+                <StackPanel HorizontalAlignment="Center" 
+                           Orientation="Horizontal" 
+                           Spacing="10"
+                           Margin="20">
+                    <Button Classes="Basic Rounded"
+                            Command="{Binding ToggleThemeCommand}"
+                            ToolTip.Tip="Toggle Theme">
+                        <material:MaterialIcon Kind="Lightbulb" />
+                    </Button>
+                </StackPanel>
+            </sukiUi:SukiSideMenu.FooterContent>
+            
+            <!-- 页面内容区域 -->
+            <sukiUi:SukiSideMenu.Content>
+                <ContentControl Content="{Binding ActivePage}"/>
+            </sukiUi:SukiSideMenu.Content>
+        </sukiUi:SukiSideMenu>
+        
+                </Grid>
+            </Border>
+        </sukiUi:SukiWindow>

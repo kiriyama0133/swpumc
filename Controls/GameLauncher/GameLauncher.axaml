@@ -1,0 +1,318 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+             xmlns:suki="clr-namespace:SukiUI;assembly=SukiUI"
+             xmlns:converters="using:Avalonia.Data.Converters"
+             xmlns:utils="using:swpumc.Utils"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             x:Class="swpumc.Controls.GameLauncher.GameLauncher">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 游戏核心选择区域 -->
+        <sukiUi:GlassCard Grid.Row="0" 
+                          CornerRadius="15" 
+                          Padding="20"
+                          Margin="0,0,0,10">
+            <StackPanel>
+            
+                <TextBlock Text="选择游戏核心" 
+                           FontSize="18" 
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource SukiText}"
+                           Margin="0,0,0,15"/>
+                
+                <!-- 核心选择下拉框 -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <ComboBox Grid.Column="0"
+                              Name="GameCoreComboBox"
+                              ItemsSource="{Binding GameCores}"
+                              SelectedItem="{Binding SelectedGameCore}"
+                              DisplayMemberBinding="{Binding DisplayName}"
+                              PlaceholderText="请选择游戏核心..."
+                              Height="40"/>
+                    
+                    <Button Grid.Column="2"
+                            Name="RefreshButton"
+                            Content="刷新"
+                            Width="80"
+                            Height="40"
+                            Click="OnRefreshClicked"/>
+                </Grid>
+                
+                <!-- 核心信息显示 -->
+                <StackPanel Name="CoreInfoPanel" 
+                            Margin="0,15,0,0"
+                            IsVisible="{Binding HasSelectedCore}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="核心ID:" FontWeight="Bold" Margin="0,0,10,5"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedGameCore.Id}" Margin="0,0,0,5"/>
+                        
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="类型:" FontWeight="Bold" Margin="0,0,10,5"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding SelectedGameCore.Type}" Margin="0,0,0,5"/>
+                        
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="来源:" FontWeight="Bold" Margin="0,0,10,5"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding SelectedGameCore.Source}" Margin="0,0,0,5"/>
+                        
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Java版本:" FontWeight="Bold" Margin="0,0,10,5"/>
+                        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding SelectedGameCore.JavaVersion}" Margin="0,0,0,5"/>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </sukiUi:GlassCard>
+        
+        <!-- 启动配置区域 -->
+        <sukiUi:GlassCard Grid.Row="1" 
+                          CornerRadius="15" 
+                          Padding="20"
+                          Margin="0,0,0,10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="启动配置" 
+                               FontSize="18" 
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource SukiText}"
+                               Margin="0,0,0,15"/>
+                    
+                    <!-- 启动配置Tab Control -->
+                    <TabControl Classes="HorizontalTabs" 
+                                TabStripPlacement="Right"
+                                ItemsSource="{Binding LaunchConfigTabs}"
+                                SelectedItem="{Binding SelectedLaunchConfigTab}"
+                                Height="300">
+                        <TabControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Header}" />
+                            </DataTemplate>
+                        </TabControl.ItemTemplate>
+                        <TabControl.ContentTemplate>
+                            <DataTemplate>
+                                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                    <StackPanel Spacing="20">
+                                        <!-- 内存配置Tab -->
+                                        <StackPanel IsVisible="{Binding Content, Converter={x:Static utils:StringConverters.Equal}, ConverterParameter='MemoryConfig'}">
+                                            <TextBlock Text="内存分配设置" FontWeight="Bold" FontSize="18" Margin="0,0,0,20" Foreground="{DynamicResource SukiText}"/>
+                                            
+                                            <!-- 最小内存设置 -->
+                                            <StackPanel Margin="0,0,0,20">
+                                                <TextBlock Text="最小内存" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="80"/>
+                                                    </Grid.ColumnDefinitions>
+                                                        
+                                                    <Slider Grid.Column="0" 
+                                                            Name="MinMemorySlider"
+                                                            Minimum="512" Maximum="8192" 
+                                                            Value="{Binding DataContext.MinMemorySize, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                            TickFrequency="256" 
+                                                            IsSnapToTickEnabled="True"
+                                                            Margin="0,0,10,0"/>
+                                                    <TextBlock Grid.Column="1" 
+                                                               Text="{Binding DataContext.MinMemorySize, RelativeSource={RelativeSource AncestorType=UserControl}, StringFormat='{}{0} MB'}" 
+                                                               FontWeight="Bold" 
+                                                               VerticalAlignment="Center"
+                                                               HorizontalAlignment="Center"/>
+                                                </Grid>
+                                            </StackPanel>
+                                            
+                                            <!-- 最大内存设置 -->
+                                            <StackPanel>
+                                                <TextBlock Text="最大内存" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="80"/>
+                                                    </Grid.ColumnDefinitions>
+                                                        
+                                                    <Slider Grid.Column="0" 
+                                                            Name="MaxMemorySlider"
+                                                            Minimum="1024" Maximum="16384" 
+                                                            Value="{Binding DataContext.MaxMemorySize, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                            TickFrequency="256" 
+                                                            IsSnapToTickEnabled="True"
+                                                            Margin="0,0,10,0"/>
+                                                    <TextBlock Grid.Column="1" 
+                                                               Text="{Binding DataContext.MaxMemorySize, RelativeSource={RelativeSource AncestorType=UserControl}, StringFormat='{}{0} MB'}" 
+                                                               FontWeight="Bold" 
+                                                               VerticalAlignment="Center"
+                                                               HorizontalAlignment="Center"/>
+                                                </Grid>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        
+                                        <!-- 窗口配置Tab -->
+                                        <StackPanel IsVisible="{Binding Content, Converter={x:Static utils:StringConverters.Equal}, ConverterParameter='WindowConfig'}">
+                                            <TextBlock Text="窗口和显示设置" FontWeight="Bold" FontSize="18" Margin="0,0,0,20" Foreground="{DynamicResource SukiText}"/>
+                                            
+                                            <!-- 窗口尺寸设置 -->
+                                            <StackPanel Margin="0,0,0,20">
+                                                <TextBlock Text="窗口尺寸" FontWeight="Bold" FontSize="14" Margin="0,0,0,15"/>
+                                                
+                                                <!-- 宽度设置 -->
+                                                <StackPanel Margin="0,0,0,15">
+                                                    <TextBlock Text="宽度:" FontWeight="Bold" Margin="0,0,0,8"/>
+                                                    <TextBox Text="{Binding DataContext.GameWidth, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                                             Height="35"/>
+                                                </StackPanel>
+                                                
+                                                <!-- 高度设置 -->
+                                                <StackPanel>
+                                                    <TextBlock Text="高度:" FontWeight="Bold" Margin="0,0,0,8"/>
+                                                    <TextBox Text="{Binding DataContext.GameHeight, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                                             Height="35"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            
+                                            <!-- 显示模式设置 -->
+                                            <StackPanel>
+                                                <TextBlock Text="显示模式" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                                                <CheckBox Content="全屏模式"
+                                                          IsChecked="{Binding DataContext.IsFullScreen, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                          FontSize="14"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        
+                                        <!-- 服务器配置Tab -->
+                                        <StackPanel IsVisible="{Binding Content, Converter={x:Static utils:StringConverters.Equal}, ConverterParameter='ServerConfig'}">
+                                            <TextBlock Text="服务器连接设置" FontWeight="Bold" FontSize="18" Margin="0,0,0,20" Foreground="{DynamicResource SukiText}"/>
+                                            
+                                            <StackPanel>
+                                                <TextBlock Text="服务器地址" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                                                <TextBox Text="{Binding DataContext.ServerAddress, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                                         Watermark="可选，如: play.hypixel.net"
+                                                         Height="40"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        
+                                        <!-- Java配置Tab -->
+                                        <StackPanel IsVisible="{Binding Content, Converter={x:Static utils:StringConverters.Equal}, ConverterParameter='JavaConfig'}">
+                                            <TextBlock Text="Java环境设置" FontWeight="Bold" FontSize="18" Margin="0,0,0,20" Foreground="{DynamicResource SukiText}"/>
+                                            
+                                            <!-- Java环境选择 -->
+                                            <StackPanel Margin="0,0,0,20">
+                                                <TextBlock Text="Java环境" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                                                
+                                                <!-- Java环境选择下拉框 -->
+                                                <StackPanel Margin="0,0,0,15">
+                                                    <ComboBox ItemsSource="{Binding DataContext.JavaEnvironments, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                              SelectedItem="{Binding DataContext.SelectedJavaEnvironment, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                              DisplayMemberBinding="{Binding DisplayName}"
+                                                              Height="40"/>
+                                                </StackPanel>
+                                                
+                                                <!-- 操作按钮 -->
+                                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                                    <Button Content="浏览" 
+                                                            Click="OnSelectJavaClicked"
+                                                            Height="40" Width="80"/>
+                                                    <Button Content="刷新" 
+                                                            Click="OnRefreshJavaClicked"
+                                                            Height="40" Width="80"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            
+                                            <!-- 当前Java路径显示 -->
+                                            <StackPanel IsVisible="{Binding DataContext.HasSelectedJava, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                                                <TextBlock Text="当前Java路径" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                                                <TextBox Text="{Binding DataContext.JavaPath, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                                         IsReadOnly="True" 
+                                                         Background="{DynamicResource SukiCardBackground}"
+                                                         Height="40"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        
+                                        <!-- 高级设置Tab -->
+                                        <StackPanel IsVisible="{Binding Content, Converter={x:Static utils:StringConverters.Equal}, ConverterParameter='AdvancedConfig'}">
+                                            <TextBlock Text="高级启动参数" FontWeight="Bold" FontSize="18" Margin="0,0,0,20" Foreground="{DynamicResource SukiText}"/>
+                                            
+                                            <!-- JVM参数 -->
+                                            <StackPanel Margin="0,0,0,20">
+                                                <TextBlock Text="JVM参数" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                                                <TextBox Text="{Binding DataContext.CustomJvmArgs, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                                         Watermark="自定义JVM参数，如: -Xmx4G -XX:+UseG1GC"
+                                                         AcceptsReturn="True"
+                                                         Height="80"/>
+                                            </StackPanel>
+                                            
+                                            <!-- 游戏参数 -->
+                                            <StackPanel>
+                                                <TextBlock Text="游戏参数" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                                                <TextBox Text="{Binding DataContext.CustomGameArgs, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                                         Watermark="自定义游戏参数，如: --username PlayerName"
+                                                         AcceptsReturn="True"
+                                                         Height="80"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </ScrollViewer>
+                            </DataTemplate>
+                        </TabControl.ContentTemplate>
+                    </TabControl>
+                </StackPanel>
+            </ScrollViewer>
+        </sukiUi:GlassCard>
+        
+        <!-- 启动按钮区域 -->
+        <sukiUi:GlassCard Grid.Row="2" 
+                          CornerRadius="15" 
+                          Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- 启动状态显示 -->
+                <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Name="StatusText" 
+                               Text="准备启动游戏" 
+                               FontSize="14"
+                               Foreground="{DynamicResource SukiText}"/>
+                    <ProgressBar Name="LaunchProgressBar" 
+                                 IsIndeterminate="True" 
+                                 IsVisible="False"
+                                 Height="4"
+                                 Margin="0,5,0,0"/>
+                </StackPanel>
+                
+                <!-- 启动按钮 -->
+                <Button Grid.Column="2" 
+                        Name="LaunchButton"
+                        Content="启动游戏"
+                        Width="120"
+                        Height="40"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Click="OnLaunchClicked"
+                        IsEnabled="{Binding CanLaunch}"/>
+            </Grid>
+        </sukiUi:GlassCard>
+    </Grid>
+</UserControl>

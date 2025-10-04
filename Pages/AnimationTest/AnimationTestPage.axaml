@@ -1,0 +1,142 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+             xmlns:vm="using:swpumc.Pages.AnimationTest"
+             mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="800"
+             x:Class="swpumc.Pages.AnimationTest.AnimationTestPage"
+             x:DataType="vm:AnimationTestPageViewModel">
+  
+  <ScrollViewer>
+    <Grid Name="MainGrid" Margin="20">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      
+      <!-- 标题 -->
+      <sukiUi:GlassCard Grid.Row="0" Padding="20" Margin="0,0,0,20">
+        <StackPanel>
+          <TextBlock Text="动画测试页面" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+          <TextBlock Text="测试各种动画效果，包括淡入淡出、缩放、位移、旋转等" FontSize="14" Opacity="0.7"/>
+        </StackPanel>
+      </sukiUi:GlassCard>
+      
+      <!-- 主要内容 -->
+      <Grid Grid.Row="1">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="20"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- 左侧：基础动画测试 -->
+        <sukiUi:GlassCard Grid.Column="0" Padding="20">
+          <StackPanel>
+            <TextBlock Text="基础动画测试" FontSize="18" FontWeight="Bold" Margin="0,0,0,20"/>
+            
+            <!-- 淡入淡出动画 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="淡入淡出动画" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <Button Name="FadeInButton" Content="淡入测试" Margin="0,0,10,5" Click="OnFadeInClick"/>
+              <Button Name="FadeOutButton" Content="淡出测试" Margin="0,0,10,5" Click="OnFadeOutClick"/>
+              <Border Name="FadeTestTarget" Background="LightBlue" Height="60" CornerRadius="5" Margin="0,10,0,0">
+                <TextBlock Text="淡入淡出测试目标" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </StackPanel>
+            
+            <!-- 缩放动画 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="缩放动画" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <Button Name="ScaleInButton" Content="放大" Margin="0,0,10,5" Click="OnScaleInClick"/>
+              <Button Name="ScaleOutButton" Content="缩小" Margin="0,0,10,5" Click="OnScaleOutClick"/>
+              <Border Name="ScaleTestTarget" Background="LightGreen" Height="60" CornerRadius="5" Margin="0,10,0,0">
+                <TextBlock Text="缩放测试目标" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </StackPanel>
+            
+            <!-- 位移动画 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="位移动画" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <Button Name="MoveLeftButton" Content="左移" Margin="0,0,10,5" Click="OnMoveLeftClick"/>
+              <Button Name="MoveRightButton" Content="右移" Margin="0,0,10,5" Click="OnMoveRightClick"/>
+              <Button Name="MoveUpButton" Content="上移" Margin="0,0,10,5" Click="OnMoveUpClick"/>
+              <Button Name="MoveDownButton" Content="下移" Margin="0,0,10,5" Click="OnMoveDownClick"/>
+              <Border Name="MoveTestTarget" Background="LightCoral" Height="60" CornerRadius="5" Margin="0,10,0,0">
+                <TextBlock Text="位移测试目标" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </StackPanel>
+            
+            <!-- 旋转动画 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="旋转动画" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <Button Name="RotateButton" Content="旋转360度" Margin="0,0,10,5" Click="OnRotateClick"/>
+              <Border Name="RotateTestTarget" Background="LightYellow" Height="60" CornerRadius="5" Margin="0,10,0,0">
+                <TextBlock Text="旋转测试目标" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </StackPanel>
+          </StackPanel>
+        </sukiUi:GlassCard>
+        
+        <!-- 右侧：高级动画测试 -->
+        <sukiUi:GlassCard Grid.Column="2" Padding="20">
+          <StackPanel>
+            <TextBlock Text="高级动画测试" FontSize="18" FontWeight="Bold" Margin="0,0,0,20"/>
+            
+            <!-- 弹簧动画 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="弹簧动画" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <Button Name="SpringButton" Content="弹簧效果" Margin="0,0,10,5" Click="OnSpringClick"/>
+              <Border Name="SpringTestTarget" Background="LightPink" Height="60" CornerRadius="5" Margin="0,10,0,0">
+                <TextBlock Text="弹簧测试目标" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </StackPanel>
+            
+            <!-- 组合动画 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="组合动画" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <Button Name="ComboButton" Content="组合效果" Margin="0,0,10,5" Click="OnComboClick"/>
+              <Border Name="ComboTestTarget" Background="LightSteelBlue" Height="60" CornerRadius="5" Margin="0,10,0,0">
+                <TextBlock Text="组合测试目标" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </StackPanel>
+            
+            <!-- 缓动函数测试 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="缓动函数测试" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <ComboBox Name="EasingComboBox" SelectedIndex="0" Margin="0,0,0,10">
+                <ComboBoxItem Content="线性"/>
+                <ComboBoxItem Content="缓入"/>
+                <ComboBoxItem Content="缓出"/>
+                <ComboBoxItem Content="缓入缓出"/>
+                <ComboBoxItem Content="弹性"/>
+                <ComboBoxItem Content="反弹"/>
+              </ComboBox>
+              <Button Name="EasingTestButton" Content="测试缓动" Margin="0,0,10,5" Click="OnEasingTestClick"/>
+              <Border Name="EasingTestTarget" Background="LightSeaGreen" Height="60" CornerRadius="5" Margin="0,10,0,0">
+                <TextBlock Text="缓动测试目标" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </StackPanel>
+            
+            <!-- 连续动画 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="连续动画" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <Button Name="SequenceButton" Content="连续播放" Margin="0,0,10,5" Click="OnSequenceClick"/>
+              <Border Name="SequenceTestTarget" Background="LightGoldenrodYellow" Height="60" CornerRadius="5" Margin="0,10,0,0">
+                <TextBlock Text="连续测试目标" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </StackPanel>
+            
+            <!-- 动画控制 -->
+            <StackPanel Margin="0,0,0,20">
+              <TextBlock Text="动画控制" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+              <Button Name="StopAllButton" Content="停止所有动画" Margin="0,0,10,5" Click="OnStopAllClick"/>
+              <Button Name="ResetAllButton" Content="重置所有元素" Margin="0,0,10,5" Click="OnResetAllClick"/>
+            </StackPanel>
+          </StackPanel>
+        </sukiUi:GlassCard>
+      </Grid>
+    </Grid>
+  </ScrollViewer>
+</UserControl>

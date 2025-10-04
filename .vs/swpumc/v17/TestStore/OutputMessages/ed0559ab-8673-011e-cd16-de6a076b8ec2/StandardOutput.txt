@@ -1,0 +1,40 @@
+[ConfigService] 项目根目录: C:\Users\20742\source\repos\swpumc_test
+[ConfigService] 配置目录路径: C:\Users\20742\source\repos\swpumc_test\Assets\JSON
+[ConfigService] 应用设置文件路径: C:\Users\20742\source\repos\swpumc_test\Assets\JSON\AppSettings.json
+开始测试OAuth2获取token...
+[OAuthService] 生成授权URL: https://blessing.netlify.app/oauth/authorize?client_id=test_client&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fcallback&response_type=code&scope=read%20write&state=wpk3E4hHjtY6ELDKwLAGjfgRxFexbvwnzD9TrrLSX7w
+授权URL: https://blessing.netlify.app/oauth/authorize?client_id=test_client&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fcallback&response_type=code&scope=read%20write&state=wpk3E4hHjtY6ELDKwLAGjfgRxFexbvwnzD9TrrLSX7w
+状态码: wpk3E4hHjtY6ELDKwLAGjfgRxFexbvwnzD9TrrLSX7w
+尝试获取token...
+[HttpService] 发送请求: POST https://blessing.netlify.app/oauth/token/
+[HttpService] 请求数据: {
+  "grant_type": "authorization_code",
+  "client_id": "test_client",
+  "client_secret": "test_secret",
+  "redirect_uri": "http://localhost:8080/callback",
+  "code": "test_code"
+}
+[HttpService] 响应状态: NotFound
+[HttpService] 响应内容: <!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blessing Skin 用户手册</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.b9ed9217.css" as="style"><link rel="preload" href="/assets/js/app.9120d2e8.js" as="script"><link rel="preload" href="/assets/js/7.5f442cbb.js" as="script"><link rel="prefetch" href="/assets/js/1.409c51bc.js"><link rel="prefetch" href="/assets/js/10.7c568692.js"><link rel="prefetch" href="/assets/js/11.b2645e27.js"><link rel="prefetch" href="/assets/js/12.634cb891.js"><link rel="prefetch" href="/assets/js/13.ffff2301.js"><link rel="prefetch" href="/assets/js/14.8273e756.js"><link rel="prefetch" href="/assets/js/15.a6a3d897.js"><link rel="prefetch" href="/assets/js/16.bc7b111a.js"><link rel="prefetch" href="/assets/js/17.b8bd5064.js"><link rel="prefetch" href="/assets/js/18.c7256f88.js"><link rel="prefetch" href="/assets/js/19.8c46317b.js"><link rel="prefetch" href="/assets/js/2.ac37340d.js"><link rel="prefetch" href="/assets/js/20.14960978.js"><link rel="prefetch" href="/assets/js/21.3d5a5e81.js"><link rel="prefetch" href="/assets/js/22.942f2c7e.js"><link rel="prefetch" href="/assets/js/23.548f835d.js"><link rel="prefetch" href="/assets/js/24.ea12f19e.js"><link rel="prefetch" href="/assets/js/25.ce68f537.js"><link rel="prefetch" href="/assets/js/26.f0fcb7e2.js"><link rel="prefetch" href="/assets/js/27.9eb379af.js"><link rel="prefetch" href="/assets/js/28.aeff6bd8.js"><link rel="prefetch" href="/assets/js/29.8c2f34be.js"><link rel="prefetch" href="/assets/js/3.6471b2b2.js"><link rel="prefetch" href="/assets/js/30.09340ba8.js"><link rel="prefetch" href="/assets/js/31.d7425f32.js"><link rel="prefetch" href="/assets/js/32.d4184018.js"><link rel="prefetch" href="/assets/js/33.66f1b778.js"><link rel="prefetch" href="/assets/js/34.f99eb49a.js"><link rel="prefetch" href="/assets/js/35.20a97c01.js"><link rel="prefetch" href="/assets/js/36.ba724417.js"><link rel="prefetch" href="/assets/js/37.71dce51c.js"><link rel="prefetch" href="/assets/js/38.0a777fbf.js"><link rel="prefetch" href="/assets/js/39.25819745.js"><link rel="prefetch" href="/assets/js/4.ab630986.js"><link rel="prefetch" href="/assets/js/40.71a19fb7.js"><link rel="prefetch" href="/assets/js/41.246803a5.js"><link rel="prefetch" href="/assets/js/42.2246901c.js"><link rel="prefetch" href="/assets/js/43.3e68ef3f.js"><link rel="prefetch" href="/assets/js/44.199d1e95.js"><link rel="prefetch" href="/assets/js/45.ef7bc2b5.js"><link rel="prefetch" href="/assets/js/46.85dcbba5.js"><link rel="prefetch" href="/assets/js/47.64342b19.js"><link rel="prefetch" href="/assets/js/48.1d9321cc.js"><link rel="prefetch" href="/assets/js/49.f3f7733c.js"><link rel="prefetch" href="/assets/js/5.583164d4.js"><link rel="prefetch" href="/assets/js/50.77194c75.js"><link rel="prefetch" href="/assets/js/51.a6775e15.js"><link rel="prefetch" href="/assets/js/52.8b1aad0f.js"><link rel="prefetch" href="/assets/js/53.a0aed6de.js"><link rel="prefetch" href="/assets/js/54.2ad31730.js"><link rel="prefetch" href="/assets/js/55.df07b8e3.js"><link rel="prefetch" href="/assets/js/56.ad777795.js"><link rel="prefetch" href="/assets/js/57.d787cb24.js"><link rel="prefetch" href="/assets/js/58.a46d01e5.js"><link rel="prefetch" href="/assets/js/59.dd83dc2f.js"><link rel="prefetch" href="/assets/js/6.c2d343e3.js"><link rel="prefetch" href="/assets/js/60.dd808a37.js"><link rel="prefetch" href="/assets/js/61.e5920b0d.js"><link rel="prefetch" href="/assets/js/62.9523f082.js"><link rel="prefetch" href="/assets/js/63.5340bced.js"><link rel="prefetch" href="/assets/js/64.49cee76c.js"><link rel="prefetch" href="/assets/js/65.b6af33d9.js"><link rel="prefetch" href="/assets/js/66.0aa88ffc.js"><link rel="prefetch" href="/assets/js/67.6fa872b6.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.dd461856.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b9ed9217.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div class="theme-default-content"><h1>404</h1> <blockquote>Looks like we've got some broken links.</blockquote> <a href="/" class="router-link-active">
+      Take me home.
+    </a></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9120d2e8.js" defer></script><script src="/assets/js/7.5f442cbb.js" defer></script>
+  </body>
+</html>
+
+[OAuthService] 获取令牌失败: HTTP错误: NotFound
+获取token失败 - 这是预期的，因为我们使用的是测试参数

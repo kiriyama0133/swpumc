@@ -1,0 +1,120 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+             xmlns:material="using:Material.Icons.Avalonia"
+             xmlns:vm="using:swpumc.Controls.InfoView"
+             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="200"
+             x:Class="swpumc.Controls.InfoView.InfoView"
+             x:DataType="vm:InfoViewModel">
+
+	<UserControl.Styles>
+		<Style Selector="ComboBoxItem:pointerover">
+			<Setter Property="Background" Value="#107C41"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+		</Style>
+
+		<Style Selector="ComboBoxItem:selected">
+			<Setter Property="Background" Value="#4CAF50"/>
+			<Setter Property="Foreground" Value="White"/>
+		</Style>
+
+		<Style Selector="ComboBoxItem:pointerover /template/ Border#PART_Background">
+			<Setter Property="Background" Value="#AA0000"/>
+		</Style>
+	</UserControl.Styles>
+	
+	
+  
+  <Border MaxWidth="500" Padding="25" 
+           Background="{DynamicResource SukiCardBackground}"
+           CornerRadius="8"
+           BorderBrush="{DynamicResource SukiBorder}"
+           BorderThickness="1">
+    <StackPanel Spacing="20">
+		
+        
+        <!-- 用户选择区域 -->
+        <StackPanel Spacing="12">
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="选择用户" 
+                       FontSize="14" 
+                       FontWeight="Bold"/>
+            <Button Name="SwitchAuthButton"
+                    Content="切换验证方式"
+                    FontSize="10"
+                    Padding="8,4"
+                    Background="#4CAF50"
+                    Foreground="White"
+                    BorderThickness="0"
+                    CornerRadius="4"
+                    Click="OnSwitchAuthButtonClick"/>
+          </StackPanel>
+          
+          <ComboBox ItemsSource="{Binding AvailablePlayers}"
+                    SelectedItem="{Binding SelectedPlayer}"
+                    PlaceholderText="请选择玩家..."
+                    IsEnabled="{Binding !IsLoading}">
+            <ComboBox.ItemTemplate>
+              <DataTemplate>
+                <TextBlock Text="{Binding Nickname}" 
+                           FontSize="12" 
+                           FontWeight="SemiBold"/>
+              </DataTemplate>
+            </ComboBox.ItemTemplate>
+          </ComboBox>
+        </StackPanel>
+        
+        <!-- 玩家信息显示区域 -->
+        <StackPanel Spacing="12" IsVisible="{Binding HasSelectedPlayer}">
+          
+          <!-- 头像和基本信息 -->
+          <StackPanel Orientation="Horizontal" Spacing="12">
+            <!-- 头像 -->
+            <Image Source="{Binding DisplayAvatarBitmap}" 
+                   Stretch="UniformToFill" 
+                   Width="48" Height="48"
+                   Name="MainAvatar"/>
+            
+            <!-- 玩家基本信息 -->
+            <StackPanel Spacing="4">
+              <TextBlock Text="{Binding DisplayNickname}" 
+                         FontSize="16" 
+                         FontWeight="Bold"/>
+              <TextBlock Text="{Binding DisplayEmail}" 
+                         FontSize="12" 
+                         Foreground="Gray"/>
+              <TextBlock Text="{Binding DisplayLoginStatus}" 
+                         FontSize="10" 
+                         Foreground="{Binding DisplayLoginStatusColor}"/>
+            </StackPanel>
+          </StackPanel>
+          
+          <!-- 详细信息 -->
+          <StackPanel Spacing="10">
+            
+            <!-- 最后登录时间 -->
+            <StackPanel Orientation="Horizontal" Spacing="8">
+              <material:MaterialIcon Kind="Schedule" 
+                                    Width="14" 
+                                    Height="14"
+                                    Foreground="Gray"/>
+              <TextBlock Text="最后登录:" 
+                         FontSize="11" 
+                         Foreground="Gray"/>
+              <TextBlock Text="{Binding DisplayLastSignAt}" 
+                         FontSize="11" 
+                         FontWeight="SemiBold"/>
+            </StackPanel>
+            
+          </StackPanel>
+          
+        </StackPanel>
+        
+        
+      </StackPanel>
+  </Border>
+  
+</UserControl>

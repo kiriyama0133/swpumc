@@ -1,0 +1,107 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+             xmlns:vm="using:swpumc.Pages.Dashboard"
+             xmlns:announcement="clr-namespace:swpumc.Controls.AnnouncementDetail"
+             mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="800"
+             x:Class="swpumc.Pages.Dashboard.DashboardPage"
+             x:DataType="vm:DashboardPageViewModel">
+  
+  <Grid Name="MainGrid" Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    
+    <!-- 主要内容 -->
+    <Grid Grid.Row="1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="20"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+        
+        <!-- 服务器状态区域 -->
+        <sukiUi:GlassCard Grid.Column="0" Padding="20">
+          <StackPanel>
+            <TextBlock Text="服务器状态" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+            
+            <ItemsControl ItemsSource="{Binding Servers}">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                  <sukiUi:GlassCard Margin="0,0,0,10" Padding="15">
+                    <Grid>
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                      </Grid.ColumnDefinitions>
+                      
+                      <StackPanel Grid.Column="0">
+                        <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Type}" FontSize="12" Opacity="0.7" Margin="0,2,0,5"/>
+                        <TextBlock Text="{Binding PlayerInfo}" FontSize="14"/>
+                        <TextBlock Text="{Binding LastUpdate}" FontSize="12" Opacity="0.6"/>
+                      </StackPanel>
+                      
+                      <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+                        <Border Background="Green" CornerRadius="10" Padding="8,4" Margin="0,0,0,5">
+                          <TextBlock Text="{Binding Status}" FontSize="12" Foreground="White" FontWeight="Bold"/>
+                        </Border>
+                        <ProgressBar Value="{Binding PlayerCount}" 
+                                   Maximum="{Binding MaxPlayers}" 
+                                   Width="100" 
+                                   Height="6"/>
+                      </StackPanel>
+                    </Grid>
+                  </sukiUi:GlassCard>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </StackPanel>
+        </sukiUi:GlassCard>
+        
+        <!-- 公告区域 -->
+        <sukiUi:GlassCard Grid.Column="2" Padding="20">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Text="最新公告" FontSize="18" FontWeight="Bold" Margin="0,0,0,15" Grid.Row="0"/>
+            
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+              <ItemsControl ItemsSource="{Binding Announcements}">
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                    <sukiUi:GlassCard Margin="0,0,0,10" Padding="15" 
+                                     PointerPressed="OnAnnouncementCardClick"
+                                     Cursor="Hand">
+                      <StackPanel>
+                        <Grid Margin="0,0,0,8">
+                          <TextBlock Text="{Binding Title}" FontSize="14" FontWeight="Bold"/>
+                          <Border Background="Blue" CornerRadius="8" Padding="4,2" HorizontalAlignment="Right">
+                            <TextBlock Text="{Binding Type}" FontSize="10" Foreground="White"/>
+                          </Border>
+                        </Grid>
+                        
+                        <TextBlock Text="{Binding Content}" FontSize="12" TextWrapping="Wrap" 
+                                 Margin="0,0,0,8" MaxHeight="60" TextTrimming="CharacterEllipsis"/>
+                        
+                        <Grid>
+                          <TextBlock Text="{Binding Author}" FontSize="10" Opacity="0.7"/>
+                          <TextBlock Text="{Binding TimeAgo}" FontSize="10" Opacity="0.7" HorizontalAlignment="Right"/>
+                        </Grid>
+                      </StackPanel>
+                    </sukiUi:GlassCard>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ItemsControl>
+            </ScrollViewer>
+          </Grid>
+        </sukiUi:GlassCard>
+      </Grid>
+    </Grid>
+</UserControl>

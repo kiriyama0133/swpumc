@@ -1,0 +1,169 @@
+{
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ],
+  "baseUrl": "https://littleskin.cn/api/yggdrasil",
+  "currentUser": "2074288854@qq.com",
+  "users": [
+    {
+      "email": "2074288854@qq.com",
+      "uid": 0,
+      "nickname": "4444_QAQ",
+      "avatar": 0,
+      "score": 0,
+      "permission": 1,
+      "last_sign_at": "2025-10-03 22:01:01",
+      "register_at": "2025-10-03 22:01:01",
+      "verified": true,
+      "accessToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijlvc3R5V1VzLXBPempUdmNkQXB2Sjl5Qk1NMF9DNUlkYnlPc3RsUmlaWE0ifQ.eyJqdGkiOiIwMzJlYjRkOS1lMzk4LTQzYmItYTU0YS00MDY1MzhlNTdmOWUiLCJzdWIiOiI4OTg5IiwiYXVkIjoiODY1IiwibmJmIjoxNzU5NTAwMDYyLCJleHAiOjE3NjA3OTYwNjIsInNjb3BlcyI6WyJZZ2dkcmFzaWwuUGxheWVyUHJvZmlsZXMuU2VsZWN0IiwiWWdnZHJhc2lsLlNlcnZlci5Kb2luIl0sInNlbGVjdGVkUHJvZmlsZSI6IjU3YmEyMTNjYjNlYjQ5ZWZhMDA1NGNjYTEzNGMwYmJmIiwiaWF0IjoxNzU5NTAwMDYyLCJpc3MiOiJZZ2dkcmFzaWwgQ29ubmVjdCJ9.tNXCYW-jwxX1hO8aaYKGhEjr3XMxozAY-ZypMkfzsQ1X_fPO6sQ4AFa-q3WMbS-XJx1OwSCp7m2X22XF1-_3JDj6mz-qak95rIpHcBv4gUm3F45pIRw6ytaUjAI8CVlb3ecb3HEPSH02aRv2z-Zqhp_KeF25jiYCI2G-qWOx8f_tCJmrHLQAtzg0cJozaGZ7_-bdQ3piP0k-U_P7D3c1SmlbhA0lb8iYNlcDyBx0wSXEv7ZJDTpyh52WFdwYwyEuQCgTi4PejQqASRKRBRPiXTJK2jbWNJbXRggyNtgaXBP52tJv230zS5OZYFYB6gPZj1OosRASenDDExa5Qgxt_TblqYzU-M0MSI5wy76GSl2o5yijsNqfJooQm4b8UAY6hVUH5zw_t5ddxxKNhOp7IDNMD_6uJK_0wBLzcUVIlGiyuRZddApB5QiWxioOuUAnuU7PVxOIGSusBYrJ7d8vohD0JjX593kusJmw13SvVBwgQbgxHVltzkIq9pYw3SbyhYiMn-coWYC52GG7BaamLOqr4jWH7q7l9NnC7bKAmYyNRW1OsVuuiHLx_DYvE3dVtGsMOAe2uMAuNSD-yt7OZzSOZrz9yGcB5ppx1g19CnQjJDajP-HiZmaoXmPfTJeZ-9Q47jQihYhCuoJlnuevpWE7vY2hq00RvvDL_ODNbWk",
+      "clientToken": "3bd42fef-50e3-4dba-b3e3-24c27b9cbe3f",
+      "profiles": [
+        {
+          "id": "57ba213cb3eb49efa0054cca134c0bbf",
+          "name": "4444_QAQ",
+          "legacy": false,
+          "textures": {
+            "skin": null,
+            "cape": null
+          },
+          "lastModified": "2025-10-03 22:01:01"
+        }
+      ],
+      "wardrobe": {
+        "skins": [],
+        "capes": []
+      }
+    },
+    {
+      "email": "offline_4444QAQ@local",
+      "uid": 0,
+      "nickname": "4444QAQ",
+      "avatar": 0,
+      "score": 0,
+      "permission": 1,
+      "last_sign_at": "2025-10-03 06:29:50",
+      "register_at": "2025-10-03 06:29:50",
+      "verified": true,
+      "accessToken": "",
+      "clientToken": "",
+      "profiles": [],
+      "wardrobe": {
+        "skins": [],
+        "capes": []
+      }
+    },
+    {
+      "email": "offline_4444@local",
+      "uid": 0,
+      "nickname": "4444",
+      "avatar": 0,
+      "score": 0,
+      "permission": 1,
+      "last_sign_at": "2025-10-03 22:00:51",
+      "register_at": "2025-10-03 22:00:51",
+      "verified": true,
+      "accessToken": "",
+      "clientToken": "",
+      "profiles": [],
+      "wardrobe": {
+        "skins": [],
+        "capes": []
+      }
+    },
+    {
+      "email": "offline_44443@local",
+      "uid": 0,
+      "nickname": "44443",
+      "avatar": 0,
+      "score": 0,
+      "permission": 1,
+      "last_sign_at": "2025-10-03 07:10:15",
+      "register_at": "2025-10-03 07:10:15",
+      "verified": true,
+      "accessToken": "",
+      "clientToken": "",
+      "profiles": [],
+      "wardrobe": {
+        "skins": [],
+        "capes": []
+      }
+    },
+    {
+      "email": "offline_44444444@local",
+      "uid": 0,
+      "nickname": "44444444",
+      "avatar": 0,
+      "score": 0,
+      "permission": 1,
+      "last_sign_at": "2025-10-03 07:17:44",
+      "register_at": "2025-10-03 07:17:44",
+      "verified": true,
+      "accessToken": "",
+      "clientToken": "",
+      "profiles": [],
+      "wardrobe": {
+        "skins": [],
+        "capes": []
+      }
+    },
+    {
+      "email": "offline_4444asdasd@local",
+      "uid": 0,
+      "nickname": "4444asdasd",
+      "avatar": 0,
+      "score": 0,
+      "permission": 1,
+      "last_sign_at": "2025-10-03 07:17:54",
+      "register_at": "2025-10-03 07:17:54",
+      "verified": true,
+      "accessToken": "",
+      "clientToken": "",
+      "profiles": [],
+      "wardrobe": {
+        "skins": [],
+        "capes": []
+      }
+    },
+    {
+      "email": "offline_4444asdasd123asd@local",
+      "uid": 0,
+      "nickname": "4444asdasd123asd",
+      "avatar": 0,
+      "score": 0,
+      "permission": 1,
+      "last_sign_at": "2025-10-03 07:18:00",
+      "register_at": "2025-10-03 07:18:00",
+      "verified": true,
+      "accessToken": "",
+      "clientToken": "",
+      "profiles": [],
+      "wardrobe": {
+        "skins": [],
+        "capes": []
+      }
+    },
+    {
+      "email": "offline_4444qaq@local",
+      "uid": 0,
+      "nickname": "4444qaq",
+      "avatar": 0,
+      "score": 0,
+      "permission": 1,
+      "last_sign_at": "2025-10-03 07:20:15",
+      "register_at": "2025-10-03 07:20:15",
+      "verified": true,
+      "accessToken": "",
+      "clientToken": "",
+      "profiles": [],
+      "wardrobe": {
+        "skins": [],
+        "capes": []
+      }
+    }
+  ]
+}

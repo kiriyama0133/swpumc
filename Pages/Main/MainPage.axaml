@@ -1,0 +1,69 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+             xmlns:suki="clr-namespace:SukiUI;assembly=SukiUI"
+             xmlns:gamelancher="clr-namespace:swpumc.Controls.GameLauncher"
+             xmlns:infoview="clr-namespace:swpumc.Controls.InfoView"
+             xmlns:loginform="clr-namespace:swpumc.Controls.Loginform"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="600"
+             x:Class="swpumc.Pages.Main.MainPage">
+    
+    
+    <Grid Margin="20,5,20,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 主要内容区域 -->
+        <Grid Grid.Row="1" Name="MainContentGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- 游戏启动控件 -->
+            <ScrollViewer Grid.Column="0" 
+                          Name="GameLauncherScrollViewer"
+                          VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled">
+                <gamelancher:GameLauncher Name="GameLauncherControl"/>
+            </ScrollViewer>
+            
+            <!-- 右侧面板容器 -->
+            <Grid Grid.Column="2" Name="RightPanelContainer">
+                <!-- 用户信息面板 -->
+                <StackPanel Name="UserInfoPanel" 
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right">
+                    <!-- InfoView - 显示第三方用户信息 -->
+                    <infoview:InfoView Name="InfoViewControl"
+                                       OnSwitchAuthRequested="OnSwitchAuthRequested"/>
+                    
+                    <!-- OfflinePlayerView - 显示离线玩家信息 -->
+                    <infoview:OfflinePlayerView Name="OfflinePlayerViewControl"
+                                                OnSwitchAuthRequested="OnSwitchAuthRequested"
+                                                IsVisible="False"/>
+                </StackPanel>
+                
+                <!-- LoginForm - 登录表单（覆盖整个右侧区域） -->
+                <loginform:SkinLoginForm Name="LoginFormControl"
+                                        IsVisible="False"
+                                        OnLoginSuccess="OnLoginSuccess"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Stretch"/>
+            </Grid>
+            
+            <!-- 全屏登录表单（覆盖整个内容区域） -->
+            <loginform:SkinLoginForm Grid.Column="0" Grid.ColumnSpan="3"
+                                    Name="FullScreenLoginForm"
+                                    IsVisible="False"
+                                    OnLoginSuccess="OnLoginSuccess"
+                                    VerticalAlignment="Stretch"
+                                    HorizontalAlignment="Stretch"/>
+        </Grid>
+    </Grid>
+</UserControl>

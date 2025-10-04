@@ -1,0 +1,5 @@
+C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\TestMinecraftLaunch.csproj.AssemblyReference.cache
+C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\TestMinecraftLaunch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\TestMinecraftLaunch.AssemblyInfoInputs.cache
+C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\TestMinecraftLaunch.AssemblyInfo.cs
+C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\TestMinecraftLaunch.csproj.CoreCompileInputs.cache

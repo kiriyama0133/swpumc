@@ -1,0 +1,348 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:suki="clr-namespace:SukiUI;assembly=SukiUI"
+             xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+             xmlns:material="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             xmlns:vm="clr-namespace:swpumc.Controls.Loginform;assembly=swpumc"
+             xmlns:converters="clr-namespace:Avalonia.Data.Converters;assembly=Avalonia.Base"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="700"
+             x:Class="swpumc.Controls.Loginform.SkinLoginForm"
+             x:DataType="vm:SkinLoginFormViewModel">
+  
+  <Grid Width="450" Height="500">
+    <sukiUi:GlassCard Width="450" Height="500" Background="Transparent" BorderThickness="0">
+      <sukiUi:BusyArea BusyText="正在登录..." IsBusy="{Binding IsLoading}">
+        <StackPanel Spacing="15" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+          
+          <!-- 标题区域 -->
+          <StackPanel HorizontalAlignment="Center" Spacing="6">
+            <TextBlock Text="登录"
+                       FontSize="20"
+                       FontWeight="DemiBold"
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource SukiText}"/>
+            <TextBlock Text="选择您的登录方式"
+                       FontSize="12"
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource SukiLowText}"/>
+          </StackPanel>
+          
+          <!-- 验证方式选择 -->
+          <StackPanel Spacing="8">
+            <StackPanel Orientation="Horizontal" Spacing="12" HorizontalAlignment="Center">
+              <!-- 离线游玩 -->
+              <ToggleButton x:Name="OfflineButton"
+                            Content="离线游玩"
+                            Classes="Flat Rounded"
+                            IsEnabled="{Binding !IsLoading}"
+                            IsChecked="{Binding IsOfflineSelected}"
+                            Command="{Binding SelectOfflineCommand}"
+                            FontSize="11"
+                            FontWeight="DemiBold"
+                            Padding="12,6"
+                            MinWidth="100"
+                            Height="32">
+                <ToggleButton.Content>
+                  <StackPanel Orientation="Horizontal" Spacing="4">
+                    <material:MaterialIcon Kind="Person"
+                                          Width="14"
+                                          Height="14"
+                                          Foreground="{DynamicResource SukiText}"/>
+                    <TextBlock Text="离线游玩"
+                               Foreground="{DynamicResource SukiText}"/>
+                  </StackPanel>
+                </ToggleButton.Content>
+              </ToggleButton>
+              
+              <!-- 微软验证 -->
+              <ToggleButton x:Name="MicrosoftButton"
+                            Content="微软验证"
+                            Classes="Flat Rounded"
+                            IsEnabled="{Binding !IsLoading}"
+                            IsChecked="{Binding IsMicrosoftSelected}"
+                            Command="{Binding SelectMicrosoftCommand}"
+                            FontSize="11"
+                            FontWeight="DemiBold"
+                            Padding="12,6"
+                            MinWidth="100"
+                            Height="32">
+                <ToggleButton.Content>
+                  <StackPanel Orientation="Horizontal" Spacing="4">
+                    <material:MaterialIcon Kind="Microsoft"
+                                          Width="14"
+                                          Height="14"
+                                          Foreground="{DynamicResource SukiText}"/>
+                    <TextBlock Text="微软验证"
+                               Foreground="{DynamicResource SukiText}"/>
+                  </StackPanel>
+                </ToggleButton.Content>
+              </ToggleButton>
+              
+              <!-- 第三方验证 -->
+              <ToggleButton x:Name="ThirdPartyButton"
+                            Content="第三方验证"
+                            Classes="Flat Rounded"
+                            IsEnabled="{Binding !IsLoading}"
+                            IsChecked="{Binding IsThirdPartySelected}"
+                            Command="{Binding SelectThirdPartyCommand}"
+                            FontSize="11"
+                            FontWeight="DemiBold"
+                            Padding="12,6"
+                            MinWidth="100"
+                            Height="32">
+                <ToggleButton.Content>
+                  <StackPanel Orientation="Horizontal" Spacing="4">
+                    <material:MaterialIcon Kind="AccountCircle"
+                                          Width="14"
+                                          Height="14"
+                                          Foreground="{DynamicResource SukiText}"/>
+                    <TextBlock Text="第三方验证"
+                               Foreground="{DynamicResource SukiText}"/>
+                  </StackPanel>
+                </ToggleButton.Content>
+              </ToggleButton>
+            </StackPanel>
+          </StackPanel>
+          
+          <!-- 离线游玩输入框 -->
+          <StackPanel IsVisible="{Binding IsOfflineSelected}" Spacing="8">
+            <StackPanel Spacing="4">
+              <TextBlock Text="玩家名称"
+                         FontSize="11"
+                         FontWeight="DemiBold"
+                         Foreground="{DynamicResource SukiLowText}"
+                         HorizontalAlignment="Center"/>
+              <Border Background="Transparent"
+                      BorderBrush="{DynamicResource SukiControlBorderBrush}"
+                      BorderThickness="1"
+                      CornerRadius="4"
+                      Height="36"
+                      Width="320">
+                <Grid>
+                  <material:MaterialIcon Kind="Person"
+                                        Width="14" 
+                                        Height="14"
+                                        Foreground="{DynamicResource SukiLowText}"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Left"
+                                        Margin="10,0,0,0"/>
+                  <TextBox x:Name="OfflineNameTextBox"
+                           Text="{Binding OfflineName, Mode=TwoWay}"
+                           Watermark="请输入玩家名称"
+                           Background="Transparent"
+                           BorderThickness="0"
+                           Height="36"
+                           FontSize="13"
+                           Padding="35,0,10,0"
+                           VerticalAlignment="Center"/>
+                </Grid>
+              </Border>
+            </StackPanel>
+          </StackPanel>
+          
+          <!-- 微软验证输入框 -->
+          <StackPanel IsVisible="{Binding IsMicrosoftSelected}" Spacing="8">
+            <StackPanel Spacing="4">
+              <TextBlock Text="微软账户邮箱"
+                         FontSize="11"
+                         FontWeight="DemiBold"
+                         Foreground="{DynamicResource SukiLowText}"
+                         HorizontalAlignment="Center"/>
+              <Border Background="Transparent"
+                      BorderBrush="{DynamicResource SukiControlBorderBrush}"
+                      BorderThickness="1"
+                      CornerRadius="4"
+                      Height="36"
+                      Width="320">
+                <Grid>
+                  <material:MaterialIcon Kind="Email"
+                                        Width="14" 
+                                        Height="14"
+                                        Foreground="{DynamicResource SukiLowText}"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Left"
+                                        Margin="10,0,0,0"/>
+                  <TextBox x:Name="MicrosoftEmailTextBox"
+                           Text="{Binding MicrosoftEmail, Mode=TwoWay}"
+                           Watermark="请输入微软账户邮箱"
+                           Background="Transparent"
+                           BorderThickness="0"
+                           Height="36"
+                           FontSize="13"
+                           Padding="35,0,10,0"
+                           VerticalAlignment="Center"/>
+                </Grid>
+              </Border>
+            </StackPanel>
+            
+            <!-- 设备代码显示 -->
+            <StackPanel IsVisible="{Binding IsMicrosoftAuthInProgress}" Spacing="8" Margin="0,10,0,0">
+              <Border Background="{DynamicResource SukiCardBackground}"
+                      BorderBrush="{DynamicResource SukiBorder}"
+                      BorderThickness="1"
+                      CornerRadius="6"
+                      Padding="15">
+                <StackPanel Spacing="8">
+                  <TextBlock Text="设备认证"
+                             FontSize="12"
+                             FontWeight="DemiBold"
+                             Foreground="{DynamicResource SukiText}"
+                             HorizontalAlignment="Center"/>
+                  
+                  <TextBlock Text="请在浏览器中访问以下链接并输入设备代码："
+                             FontSize="11"
+                             Foreground="{DynamicResource SukiLowText}"
+                             HorizontalAlignment="Center"
+                             TextWrapping="Wrap"/>
+                  
+                  <TextBlock Text="{Binding VerificationUrl}"
+                             FontSize="10"
+                             Foreground="{DynamicResource SukiAccent}"
+                             HorizontalAlignment="Center"
+                             TextWrapping="Wrap"/>
+                  
+                  <Border Background="{DynamicResource SukiControlBackground}"
+                          BorderBrush="{DynamicResource SukiAccent}"
+                          BorderThickness="1"
+                          CornerRadius="4"
+                          Padding="8"
+                          HorizontalAlignment="Center">
+                    <TextBlock Text="{Binding DeviceCode}"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource SukiAccent}"
+                               HorizontalAlignment="Center"
+                               FontFamily="Consolas"/>
+                  </Border>
+                  
+                  <TextBlock Text="请在5分钟内完成认证"
+                             FontSize="10"
+                             Foreground="{DynamicResource SukiLowText}"
+                             HorizontalAlignment="Center"/>
+                </StackPanel>
+              </Border>
+            </StackPanel>
+          </StackPanel>
+          
+          <!-- 第三方验证输入框 -->
+          <StackPanel IsVisible="{Binding IsThirdPartySelected}" Spacing="8">
+            <StackPanel Spacing="6">
+              <StackPanel Spacing="4">
+                <TextBlock Text="邮箱地址"
+                           FontSize="11"
+                           FontWeight="DemiBold"
+                           Foreground="{DynamicResource SukiLowText}"
+                           HorizontalAlignment="Center"/>
+                <Border Background="Transparent"
+                        BorderBrush="{DynamicResource SukiControlBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        Height="36"
+                        Width="320">
+                  <Grid>
+                    <material:MaterialIcon Kind="Email"
+                                          Width="14" 
+                                          Height="14"
+                                          Foreground="{DynamicResource SukiLowText}"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Left"
+                                          Margin="10,0,0,0"/>
+                    <TextBox x:Name="ThirdPartyEmailTextBox"
+                             Text="{Binding ThirdPartyEmail, Mode=TwoWay}"
+                             Watermark="请输入邮箱地址"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Height="36"
+                             FontSize="13"
+                             Padding="35,0,10,0"
+                             VerticalAlignment="Center"/>
+                  </Grid>
+                </Border>
+              </StackPanel>
+              
+              <StackPanel Spacing="4">
+                <TextBlock Text="密码"
+                           FontSize="11"
+                           FontWeight="DemiBold"
+                           Foreground="{DynamicResource SukiLowText}"
+                           HorizontalAlignment="Center"/>
+                <Border Background="Transparent"
+                        BorderBrush="{DynamicResource SukiControlBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        Height="36"
+                        Width="320">
+                  <Grid>
+                    <material:MaterialIcon Kind="Lock"
+                                          Width="14" 
+                                          Height="14"
+                                          Foreground="{DynamicResource SukiLowText}"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Left"
+                                          Margin="10,0,0,0"/>
+                    <TextBox x:Name="ThirdPartyPasswordTextBox"
+                             Text="{Binding ThirdPartyPassword, Mode=TwoWay}"
+                             PasswordChar="●"
+                             Watermark="请输入密码"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Height="36"
+                             FontSize="13"
+                             Padding="35,0,10,0"
+                             VerticalAlignment="Center"/>
+                  </Grid>
+                </Border>
+              </StackPanel>
+            </StackPanel>
+          </StackPanel>
+
+
+          <!-- 登录按钮 -->
+          <Button x:Name="LoginButton"
+                  Classes="Flat Rounded"
+                  Height="40"
+                  FontSize="14"
+                  FontWeight="DemiBold"
+                  Command="{Binding LoginCommand}"
+                  HorizontalAlignment="Center"
+                  Width="200"
+                  Margin="0,6,0,0">
+            <Button.Content>
+              <StackPanel Orientation="Horizontal" Spacing="6" HorizontalAlignment="Center">
+                <material:MaterialIcon Kind="Login"
+                                      Width="16"
+                                      Height="16"
+                                      Foreground="White"/>
+                <TextBlock Text="立即登录"
+                           Foreground="White"
+                           FontWeight="DemiBold"/>
+              </StackPanel>
+            </Button.Content>
+          </Button>
+          
+          <!-- 底部链接 -->
+          <StackPanel HorizontalAlignment="Center" 
+                      Orientation="Horizontal" 
+                      Spacing="12"
+                      Margin="0,8,0,0">
+            <Button Content="忘记密码？" 
+                    Classes="Basic"
+                    Command="{Binding ForgotPasswordCommand}"
+                    Foreground="{DynamicResource SukiPrimaryColor}"
+                    FontSize="10"
+                    FontWeight="DemiBold"/>
+            <Button Content="注册账号" 
+                    Classes="Basic"
+                    Command="{Binding RegisterCommand}"
+                    Foreground="{DynamicResource SukiPrimaryColor}"
+                    FontSize="10"
+                    FontWeight="DemiBold"/>
+          </StackPanel>
+          
+        </StackPanel>
+      </sukiUi:BusyArea>
+    </sukiUi:GlassCard>
+  </Grid>
+</UserControl>

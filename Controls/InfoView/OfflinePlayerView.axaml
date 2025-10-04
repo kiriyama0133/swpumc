@@ -1,0 +1,116 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+             xmlns:suki="clr-namespace:SukiUI;assembly=SukiUI"
+             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="200"
+             x:Class="swpumc.Controls.InfoView.OfflinePlayerView">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 标题栏 -->
+        <Grid Grid.Row="0" Margin="0,0,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Column="0" 
+                       Text="离线玩家"
+                       FontSize="14"
+                       FontWeight="DemiBold"
+                       Foreground="{DynamicResource SukiText}"
+                       VerticalAlignment="Center"/>
+            
+            <Button Grid.Column="1"
+                    Content="切换验证方式"
+                    Background="#4CAF50"
+                    Foreground="White"
+                    BorderThickness="0"
+                    CornerRadius="4"
+                    Padding="12,6"
+                    FontSize="11"
+                    FontWeight="DemiBold"
+                    Command="{Binding SwitchAuthCommand}"/>
+        </Grid>
+        
+        <!-- 玩家信息显示区域 -->
+        <Border Grid.Row="1"
+                Background="{DynamicResource SukiCardBackground}"
+                BorderBrush="{DynamicResource SukiBorder}"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <!-- 头像 -->
+                <Border Grid.Row="0"
+                        Width="80"
+                        Height="80"
+                        CornerRadius="40"
+                        Background="{DynamicResource SukiControlBackground}"
+                        BorderBrush="{DynamicResource SukiBorder}"
+                        BorderThickness="2"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,15">
+                    <Image Name="PlayerAvatar"
+                           Source="{Binding DisplayAvatarBitmap}"
+                           Stretch="Uniform"
+                           Width="76"
+                           Height="76"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                </Border>
+                
+                <!-- 玩家名称 -->
+                <TextBlock Grid.Row="1"
+                           Text="{Binding DisplayNickname}"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource SukiText}"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,8"/>
+                
+                <!-- 玩家类型 -->
+                <Border Grid.Row="2"
+                        Background="{DynamicResource SukiAccent}"
+                        CornerRadius="12"
+                        Padding="12,4"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,8">
+                    <TextBlock Text="离线模式"
+                               FontSize="11"
+                               FontWeight="DemiBold"
+                               Foreground="White"
+                               HorizontalAlignment="Center"/>
+                </Border>
+                
+                <!-- 最后登录时间 -->
+                <StackPanel Grid.Row="3" 
+                            Orientation="Horizontal" 
+                            HorizontalAlignment="Center"
+                            Spacing="6">
+                    <PathIcon Data="{StaticResource ClockIcon}" 
+                              Width="12" 
+                              Height="12" 
+                              Foreground="{DynamicResource SukiLowText}"/>
+                    <TextBlock Text="{Binding DisplayLastSignAt}"
+                               FontSize="12"
+                               Foreground="{DynamicResource SukiLowText}"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
