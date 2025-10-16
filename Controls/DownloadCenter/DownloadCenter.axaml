@@ -4,104 +4,299 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
              xmlns:suki="clr-namespace:SukiUI;assembly=SukiUI"
+             xmlns:material="using:Material.Icons.Avalonia"
              xmlns:converters="using:Avalonia.Data.Converters"
              xmlns:utils="using:swpumc.Utils"
              mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="700"
              x:Class="swpumc.Controls.DownloadCenter.DownloadCenter">
 
+    <UserControl.Resources>
+        <!-- 布尔值到背景色的转换器 -->
+        <utils:BooleanToBackgroundConverter x:Key="BooleanToBackgroundConverter"/>
+        
+        <!-- 布尔值到前景色的转换器 -->
+        <utils:BooleanToForegroundConverter x:Key="BooleanToForegroundConverter"/>
+        
+        <!-- 布尔值到边框厚度的转换器 -->
+        <utils:BooleanToBorderThicknessConverter x:Key="BooleanToBorderThicknessConverter"/>
+    </UserControl.Resources>
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
         
         
-        <!-- 版本选择区域 -->
-        <sukiUi:GlassCard Grid.Row="0" 
-                          CornerRadius="15" 
-                          Padding="20"
-                          Margin="0,0,0,10">
-            <!-- 模组加载器选择区域 -->
-            <StackPanel Spacing="10">
-                <!-- Tab按钮区域 -->
-                <StackPanel Orientation="Horizontal" Spacing="5">
-                    <Button Name="OptifineTabButton" 
-                            Content="Optifine" 
-                            Width="100" 
-                            Height="35"
-                            Command="{Binding SelectOptifineCommand}"/>
-                    <Button Name="FabricTabButton" 
-                            Content="Fabric" 
-                            Width="100" 
-                            Height="35"
-                            Command="{Binding SelectFabricCommand}"/>
-                    <Button Name="QuiltTabButton" 
-                            Content="Quilt" 
-                            Width="100" 
-                            Height="35"
-                            Command="{Binding SelectQuiltCommand}"/>
-                </StackPanel>
-                
-                <!-- 内容区域 -->
-                <Border Background="{DynamicResource SukiCardBackground}" 
-                        CornerRadius="8" 
-                        Padding="15"
-                        Height="300">
-                    <Grid>
-                        <!-- Optifine内容 -->
-                        <ListBox Name="OptifineListBox"
-                                 ItemsSource="{Binding OptifineVersions}"
-                                 SelectedItem="{Binding SelectedOptifineVersion}"
-                                 DisplayMemberBinding="{Binding DisplayName}"
-                                 MaxHeight="270"
-                                 SelectionMode="Single"
-                                 IsVisible="{Binding IsOptifineSelected}"/>
-                        
-                        <!-- Fabric内容 -->
-                        <ListBox Name="FabricListBox"
-                                 ItemsSource="{Binding FabricVersions}"
-                                 SelectedItem="{Binding SelectedFabricVersion}"
-                                 DisplayMemberBinding="{Binding DisplayName}"
-                                 MaxHeight="270"
-                                 SelectionMode="Single"
-                                 IsVisible="{Binding IsFabricSelected}"/>
-                        
-                        <!-- Quilt内容 -->
-                        <ListBox Name="QuiltListBox"
-                                 ItemsSource="{Binding QuiltVersions}"
-                                 SelectedItem="{Binding SelectedQuiltVersion}"
-                                 DisplayMemberBinding="{Binding DisplayName}"
-                                 MaxHeight="270"
-                                 SelectionMode="Single"
-                                 IsVisible="{Binding IsQuiltSelected}"/>
-                    </Grid>
-                </Border>
-            </StackPanel>
-        </sukiUi:GlassCard>
-        
-        <!-- 下载按钮区域 -->
-        <sukiUi:GlassCard Grid.Row="1" 
-                          CornerRadius="15" 
-                          Padding="20">
+        <!-- 主要内容区域 -->
+        <sukiUi:GlassCard CornerRadius="15" 
+                          Padding="24"
+                          Margin="0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="20"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 
-                <!-- 下载按钮 -->
-                <Button Grid.Column="0" 
-                        Grid.ColumnSpan="3"
-                        Name="DownloadButton"
-                        Content="开始下载"
-                        Width="120"
-                        Height="40"
-                        FontSize="16"
-                        FontWeight="Bold"
-                        Command="{Binding DownloadCommand}"
-                        IsEnabled="{Binding CanDownload}"
-                        HorizontalAlignment="Center"/>
+                <!-- 版本列表区域 -->
+                <Border Grid.Column="0" 
+                        Background="{DynamicResource SukiCardBackground}" 
+                        CornerRadius="12" 
+                        Padding="0,50,0,50"
+                        Margin="0,0,16,0"
+                        MinHeight="400"
+                        MaxHeight="500">
+                    <Grid>
+                            <!-- Optifine内容 -->
+                            <ListBox Name="OptifineListBox"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Padding="0"
+                                     Margin="0"
+                                     ItemsSource="{Binding OptifineVersions}"
+                                     SelectedItem="{Binding SelectedOptifineVersion}"
+                                     IsVisible="{Binding IsOptifineSelected}"
+                                     SelectionMode="Toggle">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="Transparent"
+                                            CornerRadius="8"
+                                            Padding="16,12"
+                                            Margin="0,2">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="{Binding DisplayName}" 
+                                                           FontWeight="SemiBold" 
+                                                           FontSize="14"/>
+                                                <TextBlock Text="{Binding Id}" 
+                                                           FontSize="12" 
+                                                           Opacity="0.7"
+                                                           Margin="0,2,0,0"/>
+                                            </StackPanel>
+                                            <material:MaterialIcon Grid.Column="1" 
+                                                                   Kind="Download" 
+                                                                   Width="20" 
+                                                                   Height="20"
+                                                                   Opacity="0.5"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        
+                            <!-- Fabric内容 -->
+                            <ListBox Name="FabricListBox"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Padding="0"
+                                     Margin="0"
+                                     ItemsSource="{Binding FabricVersions}"
+                                     SelectedItem="{Binding SelectedFabricVersion}"
+                                     IsVisible="{Binding IsFabricSelected}"
+                                     SelectionMode="Toggle">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="Transparent"
+                                            CornerRadius="8"
+                                            Padding="16,12"
+                                            Margin="0,2">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="{Binding DisplayName}" 
+                                                           FontWeight="SemiBold" 
+                                                           FontSize="14"/>
+                                                <TextBlock Text="{Binding Id}" 
+                                                           FontSize="12" 
+                                                           Opacity="0.7"
+                                                           Margin="0,2,0,0"/>
+                                            </StackPanel>
+                                            <material:MaterialIcon Grid.Column="1" 
+                                                                   Kind="Download" 
+                                                                   Width="20" 
+                                                                   Height="20"
+                                                                   Opacity="0.5"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        
+                            <!-- Quilt内容 -->
+                            <ListBox Name="QuiltListBox"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Padding="0"
+                                     Margin="0"
+                                     ItemsSource="{Binding QuiltVersions}"
+                                     SelectedItem="{Binding SelectedQuiltVersion}"
+                                     IsVisible="{Binding IsQuiltSelected}"
+                                     SelectionMode="Toggle">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="Transparent"
+                                            CornerRadius="8"
+                                            Padding="16,12"
+                                            Margin="0,2">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="{Binding DisplayName}" 
+                                                           FontWeight="SemiBold" 
+                                                           FontSize="14"/>
+                                                <TextBlock Text="{Binding Id}" 
+                                                           FontSize="12" 
+                                                           Opacity="0.7"
+                                                           Margin="0,2,0,0"/>
+                                            </StackPanel>
+                                            <material:MaterialIcon Grid.Column="1" 
+                                                                   Kind="Download" 
+                                                                   Width="20" 
+                                                                   Height="20"
+                                                                   Opacity="0.5"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </Border>
+                
+                <!-- Tab导航区域 -->
+                <Border Grid.Column="1" 
+                        Background="{DynamicResource SukiCardBackground}" 
+                        CornerRadius="12" 
+                        Padding="16,50,16,80"
+                        MinWidth="200"
+                        MaxWidth="250">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <!-- 标题和Tab按钮 -->
+                        <StackPanel Grid.Row="0" Orientation="Vertical" Spacing="12">
+                            <TextBlock Text="模组加载器" 
+                                       FontSize="16" 
+                                       FontWeight="Bold" 
+                                       HorizontalAlignment="Center"
+                                       Margin="0,0,0,8"/>
+                            
+                            <Button Name="OptifineTabButton" 
+                                    Background="{Binding IsOptifineSelected, Converter={StaticResource BooleanToBackgroundConverter}}"
+                                    Foreground="{Binding IsOptifineSelected, Converter={StaticResource BooleanToForegroundConverter}}"
+                                    BorderThickness="{Binding IsOptifineSelected, Converter={StaticResource BooleanToBorderThicknessConverter}}"
+                                    BorderBrush="{DynamicResource SukiBorderColor}"
+                                    Padding="16,12"
+                                    CornerRadius="8"
+                                    FontWeight="SemiBold"
+                                    FontSize="14"
+                                    MinWidth="160"
+                                    MinHeight="45"
+                                    Command="{Binding SelectOptifineCommand}">
+                                <StackPanel Orientation="Vertical" Spacing="4">
+                                    <material:MaterialIcon Kind="Tune" Width="20" Height="20"/>
+                                    <TextBlock Text="Optifine" FontSize="12"/>
+                                </StackPanel>
+                            </Button>
+                            
+                            <Button Name="FabricTabButton" 
+                                    Background="{Binding IsFabricSelected, Converter={StaticResource BooleanToBackgroundConverter}}"
+                                    Foreground="{Binding IsFabricSelected, Converter={StaticResource BooleanToForegroundConverter}}"
+                                    BorderThickness="{Binding IsFabricSelected, Converter={StaticResource BooleanToBorderThicknessConverter}}"
+                                    BorderBrush="{DynamicResource SukiBorderColor}"
+                                    Padding="16,12"
+                                    CornerRadius="8"
+                                    FontWeight="SemiBold"
+                                    FontSize="14"
+                                    MinWidth="160"
+                                    MinHeight="45"
+                                    Command="{Binding SelectFabricCommand}">
+                                <StackPanel Orientation="Vertical" Spacing="4">
+                                    <material:MaterialIcon Kind="Extension" Width="20" Height="20"/>
+                                    <TextBlock Text="Fabric" FontSize="12"/>
+                                </StackPanel>
+                            </Button>
+                            
+                            <Button Name="QuiltTabButton" 
+                                    Background="{Binding IsQuiltSelected, Converter={StaticResource BooleanToBackgroundConverter}}"
+                                    Foreground="{Binding IsQuiltSelected, Converter={StaticResource BooleanToForegroundConverter}}"
+                                    BorderThickness="{Binding IsQuiltSelected, Converter={StaticResource BooleanToBorderThicknessConverter}}"
+                                    BorderBrush="{DynamicResource SukiBorderColor}"
+                                    Padding="16,12"
+                                    CornerRadius="8"
+                                    FontWeight="SemiBold"
+                                    FontSize="14"
+                                    MinWidth="160"
+                                    MinHeight="45"
+                                    Command="{Binding SelectQuiltCommand}">
+                                <StackPanel Orientation="Vertical" Spacing="4">
+                                    <material:MaterialIcon Kind="Grid" Width="20" Height="20"/>
+                                    <TextBlock Text="Quilt" FontSize="12"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        
+                        <!-- 中间空白区域 -->
+                        <Grid Grid.Row="1"/>
+                        
+                        <!-- 底部下载按钮区域 -->
+                        <StackPanel Grid.Row="2" Orientation="Vertical" Spacing="12">
+                            <!-- 分隔线 -->
+                            <Border Height="1" 
+                                    Background="{DynamicResource SukiBorderColor}" 
+                                    Margin="0,8,0,8"/>
+                            
+                            <!-- 下载按钮 -->
+                            <Button Name="DownloadButton"
+                                    Background="{DynamicResource SukiPrimaryColor}"
+                                    Foreground="White"
+                                    BorderThickness="0"
+                                    Padding="20,12"
+                                    CornerRadius="8"
+                                    FontWeight="SemiBold"
+                                    FontSize="14"
+                                    MinWidth="160"
+                                    MinHeight="45"
+                                    Command="{Binding DownloadCommand}"
+                                    IsEnabled="{Binding CanDownload}">
+                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                    <material:MaterialIcon Kind="Download" Width="18" Height="18"/>
+                                    <TextBlock Text="开始下载"/>
+                                </StackPanel>
+                            </Button>
+                            
+                            <!-- 状态信息 -->
+                            <StackPanel Orientation="Horizontal" 
+                                        HorizontalAlignment="Center"
+                                        Spacing="6"
+                                        IsVisible="{Binding CanDownload}">
+                                <material:MaterialIcon Kind="CheckCircle" 
+                                                       Width="14" 
+                                                       Height="14"
+                                                       Foreground="Green"/>
+                                <TextBlock Text="准备就绪" 
+                                           FontSize="11" 
+                                           Foreground="Green"/>
+                            </StackPanel>
+                            
+                            <!-- 说明文字 -->
+                            <TextBlock Text="选择模组加载器类型，然后在左侧列表中选择版本进行下载" 
+                                       FontSize="11" 
+                                       Opacity="0.7" 
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
             </Grid>
         </sukiUi:GlassCard>
     </Grid>

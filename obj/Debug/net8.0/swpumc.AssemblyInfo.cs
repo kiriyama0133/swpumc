@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("swpumc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac37d199e686d47aff6686143df4b36d52f67302")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cbe2f2c0559833f292d89fce2c98dc3958e35a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("swpumc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("swpumc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

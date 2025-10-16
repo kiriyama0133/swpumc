@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.DependencyInjection;
@@ -52,8 +53,17 @@ public partial class VersionCardViewModel : ObservableObject
         if (_dialogManager != null)
         {
             var downloadCenter = new DownloadCenter.DownloadCenter(Version);
+            
+            // 创建一个容器来控制对话框宽度
+            var contentContainer = new Grid
+            {
+                Width = 800,  // 设置对话框宽度为800像素
+                MinHeight = 600,  // 设置最小高度
+                Children = { downloadCenter }
+            };
+            
             _dialogManager.CreateDialog()
-                .WithContent(downloadCenter)
+                .WithContent(contentContainer)
                 .WithActionButton("取消", dialog => dialog.Dismiss())
                 .TryShow();
         }

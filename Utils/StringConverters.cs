@@ -1,6 +1,8 @@
 using System;
 using System.Globalization;
 using Avalonia.Data.Converters;
+using Avalonia.Media;
+using Avalonia;
 
 namespace swpumc.Utils
 {
@@ -13,6 +15,21 @@ namespace swpumc.Utils
         /// 字符串相等比较转换器
         /// </summary>
         public static readonly StringEqualityConverter Equal = new();
+        
+        /// <summary>
+        /// 布尔值到背景色的转换器
+        /// </summary>
+        public static readonly BooleanToBackgroundConverter BooleanToBackgroundConverter = new();
+        
+        /// <summary>
+        /// 布尔值到前景色的转换器
+        /// </summary>
+        public static readonly BooleanToForegroundConverter BooleanToForegroundConverter = new();
+        
+        /// <summary>
+        /// 布尔值到边框厚度的转换器
+        /// </summary>
+        public static readonly BooleanToBorderThicknessConverter BooleanToBorderThicknessConverter = new();
     }
 
     /// <summary>
@@ -53,6 +70,72 @@ namespace swpumc.Utils
         public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
         {
             throw new NotSupportedException("StringEqualityConverter不支持反向转换");
+        }
+    }
+
+    /// <summary>
+    /// 布尔值到背景色的转换器
+    /// </summary>
+    public sealed class BooleanToBackgroundConverter : IValueConverter
+    {
+        public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+        {
+            if (value is bool isSelected)
+            {
+                return isSelected ? 
+                    new SolidColorBrush(Color.FromRgb(33, 150, 243)) : // 选中时的蓝色背景
+                    new SolidColorBrush(Color.FromRgb(45, 45, 45));    // 未选中时的深色背景
+            }
+            return new SolidColorBrush(Color.FromRgb(45, 45, 45));
+        }
+
+        public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        {
+            throw new NotSupportedException("BooleanToBackgroundConverter不支持反向转换");
+        }
+    }
+
+    /// <summary>
+    /// 布尔值到前景色的转换器
+    /// </summary>
+    public sealed class BooleanToForegroundConverter : IValueConverter
+    {
+        public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+        {
+            if (value is bool isSelected)
+            {
+                return isSelected ? 
+                    Brushes.White : // 选中时的白色前景
+                    new SolidColorBrush(Color.FromRgb(200, 200, 200)); // 未选中时的浅色前景
+            }
+            return new SolidColorBrush(Color.FromRgb(200, 200, 200));
+        }
+
+        public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        {
+            throw new NotSupportedException("BooleanToForegroundConverter不支持反向转换");
+        }
+    }
+
+    /// <summary>
+    /// 布尔值到边框厚度的转换器
+    /// </summary>
+    public sealed class BooleanToBorderThicknessConverter : IValueConverter
+    {
+        public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+        {
+            if (value is bool isSelected)
+            {
+                return isSelected ? 
+                    new Thickness(0) : // 选中时无边框
+                    new Thickness(1);  // 未选中时有边框
+            }
+            return new Thickness(1);
+        }
+
+        public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        {
+            throw new NotSupportedException("BooleanToBorderThicknessConverter不支持反向转换");
         }
     }
 }
