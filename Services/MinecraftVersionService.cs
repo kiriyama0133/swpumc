@@ -14,6 +14,7 @@ public class MinecraftVersionService : IMinecraftVersionService
     private readonly List<MinecraftVersion> _cachedVersions = new();
     private DateTime _lastRefreshTime = DateTime.MinValue;
     private readonly TimeSpan _cacheExpiration = TimeSpan.FromMinutes(30);
+    private static bool _isRefreshing = false; // 添加刷新状态标志
 
     public MinecraftVersionService(IConfigService configService)
     {
@@ -63,9 +64,24 @@ public class MinecraftVersionService : IMinecraftVersionService
 
     public async Task RefreshVersionsAsync(CancellationToken cancellationToken = default)
     {
-        _lastRefreshTime = DateTime.MinValue;
-        _cachedVersions.Clear();
-        await EnsureVersionsLoadedAsync(cancellationToken);
+        // 检查是否已经在刷新
+        if (_isRefreshing)
+        {
+            Console.WriteLine("[MinecraftVersionService] 已经在刷新中，跳过本次刷新请求");
+            return;
+        }
+        
+        try
+        {
+            _isRefreshing = true;
+            _lastRefreshTime = DateTime.MinValue;
+            _cachedVersions.Clear();
+            await EnsureVersionsLoadedAsync(cancellationToken);
+        }
+        finally
+        {
+            _isRefreshing = false;
+        }
     }
 
     private async Task EnsureVersionsLoadedAsync(CancellationToken cancellationToken)

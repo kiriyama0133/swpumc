@@ -114,12 +114,12 @@
           "Avalonia.Remote.Protocol": "11.3.6"
         },
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Avalonia.Controls.ColorPicker.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Avalonia.Controls.ColorPicker.dll": {
             "related": ".xml"
           }
         }
@@ -168,12 +168,12 @@
           "Avalonia.Themes.Simple": "11.3.6"
         },
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Avalonia.Diagnostics.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Avalonia.Diagnostics.dll": {
             "related": ".xml"
           }
         }
@@ -4845,8 +4845,6 @@
             "version": "[11.3.7, )"
           },
           "Avalonia.Diagnostics": {
-            "include": "None",
-            "suppressParent": "All",
             "target": "Package",
             "version": "[11.3.6, )"
           },

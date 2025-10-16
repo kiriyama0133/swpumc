@@ -1,5 +1,5 @@
 {
-  "lastUsedCore": "hide and seek",
+  "lastUsedCore": "1.21.8",
   "launchSettings": {
     "memoryConfig": {
       "minMemorySize": 3072,
@@ -26,5 +26,5 @@
       "customGameArgs": ""
     }
   },
-  "lastModified": "2025-10-04T19:42:34.4597956+08:00"
+  "lastModified": "2025-10-17T03:14:33.1669569+08:00"
 }

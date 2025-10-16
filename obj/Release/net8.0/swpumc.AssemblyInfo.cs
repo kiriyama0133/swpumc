@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("swpumc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+509d17d11f648c19d51a34cc7bbe6235ea27397f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac37d199e686d47aff6686143df4b36d52f67302")]
 [assembly: System.Reflection.AssemblyProductAttribute("swpumc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("swpumc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

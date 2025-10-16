@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
              xmlns:vm="using:swpumc.Pages.Dashboard"
-             xmlns:announcement="clr-namespace:swpumc.Controls.AnnouncementDetail"
              mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="800"
              x:Class="swpumc.Pages.Dashboard.DashboardPage"
              x:DataType="vm:DashboardPageViewModel">
+
   
   <Grid Name="MainGrid" Margin="20">
     <Grid.RowDefinitions>

@@ -34,7 +34,6 @@
             <StackPanel Orientation="Horizontal" Spacing="12" HorizontalAlignment="Center">
               <!-- 离线游玩 -->
               <ToggleButton x:Name="OfflineButton"
-                            Content="离线游玩"
                             Classes="Flat Rounded"
                             IsEnabled="{Binding !IsLoading}"
                             IsChecked="{Binding IsOfflineSelected}"
@@ -58,7 +57,6 @@
               
               <!-- 微软验证 -->
               <ToggleButton x:Name="MicrosoftButton"
-                            Content="微软验证"
                             Classes="Flat Rounded"
                             IsEnabled="{Binding !IsLoading}"
                             IsChecked="{Binding IsMicrosoftSelected}"
@@ -82,7 +80,6 @@
               
               <!-- 第三方验证 -->
               <ToggleButton x:Name="ThirdPartyButton"
-                            Content="第三方验证"
                             Classes="Flat Rounded"
                             IsEnabled="{Binding !IsLoading}"
                             IsChecked="{Binding IsThirdPartySelected}"

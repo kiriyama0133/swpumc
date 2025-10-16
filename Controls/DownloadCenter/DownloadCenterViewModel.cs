@@ -59,6 +59,10 @@ namespace swpumc.Controls.DownloadCenter
             
             Console.WriteLine($"[DownloadCenterViewModel] 构造函数开始 - 预选择版本: {preSelectedVersion?.Id}");
             
+            // 诊断服务工厂状态
+            Console.WriteLine("[DownloadCenterViewModel] 诊断VersionServiceFactory状态:");
+            _versionServiceFactory.Diagnose();
+            
             InitializeTabs();
             
             // 如果有预选择的版本，直接设置它
@@ -82,6 +86,13 @@ namespace swpumc.Controls.DownloadCenter
             VersionTabs.Add(new VersionTabViewModel { Header = "Quilt", Content = "Quilt" });
             
             SelectedVersionTab = VersionTabs.FirstOrDefault();
+            // 默认选中第一个Tab
+            if (SelectedVersionTab?.Content == "Optifine")
+                IsOptifineSelected = true;
+            else if (SelectedVersionTab?.Content == "Fabric")
+                IsFabricSelected = true;
+            else if (SelectedVersionTab?.Content == "Quilt")
+                IsQuiltSelected = true;
         }
 
         /// <summary>
@@ -145,7 +156,10 @@ namespace swpumc.Controls.DownloadCenter
                     return;
                 }
 
+                Console.WriteLine("[DownloadCenterViewModel] 尝试从VersionServiceFactory获取optifine服务");
                 var optifineService = _versionServiceFactory.GetService("optifine");
+                Console.WriteLine("[DownloadCenterViewModel] 成功获取optifine服务");
+                
                 var parameters = new Dictionary<string, object>
                 {
                     ["mcVersion"] = SelectedMinecraftVersion.Id
@@ -165,6 +179,14 @@ namespace swpumc.Controls.DownloadCenter
             catch (Exception ex)
             {
                 Console.WriteLine($"[DownloadCenterViewModel] 加载Optifine版本失败: {ex.Message}");
+                Console.WriteLine($"[DownloadCenterViewModel] 异常详情: {ex}");
+                // 显示错误信息给用户
+                _toastManager.CreateToast()
+                    .WithTitle("加载失败")
+                    .WithContent($"加载Optifine版本失败: {ex.Message}")
+                    .OfType(Avalonia.Controls.Notifications.NotificationType.Error)
+                    .Dismiss().After(TimeSpan.FromSeconds(5))
+                    .Queue();
             }
         }
 
@@ -183,7 +205,10 @@ namespace swpumc.Controls.DownloadCenter
                     return;
                 }
 
+                Console.WriteLine("[DownloadCenterViewModel] 尝试从VersionServiceFactory获取fabric服务");
                 var fabricService = _versionServiceFactory.GetService("fabric");
+                Console.WriteLine("[DownloadCenterViewModel] 成功获取fabric服务");
+                
                 var parameters = new Dictionary<string, object>
                 {
                     ["mcVersion"] = SelectedMinecraftVersion.Id
@@ -203,6 +228,14 @@ namespace swpumc.Controls.DownloadCenter
             catch (Exception ex)
             {
                 Console.WriteLine($"[DownloadCenterViewModel] 加载Fabric版本失败: {ex.Message}");
+                Console.WriteLine($"[DownloadCenterViewModel] 异常详情: {ex}");
+                // 显示错误信息给用户
+                _toastManager.CreateToast()
+                    .WithTitle("加载失败")
+                    .WithContent($"加载Fabric版本失败: {ex.Message}")
+                    .OfType(Avalonia.Controls.Notifications.NotificationType.Error)
+                    .Dismiss().After(TimeSpan.FromSeconds(5))
+                    .Queue();
             }
         }
 
@@ -241,6 +274,13 @@ namespace swpumc.Controls.DownloadCenter
             catch (Exception ex)
             {
                 Console.WriteLine($"[DownloadCenterViewModel] 加载Quilt版本失败: {ex.Message}");
+                // 显示错误信息给用户
+                _toastManager.CreateToast()
+                    .WithTitle("加载失败")
+                    .WithContent($"加载Quilt版本失败: {ex.Message}")
+                    .OfType(Avalonia.Controls.Notifications.NotificationType.Error)
+                    .Dismiss().After(TimeSpan.FromSeconds(5))
+                    .Queue();
             }
         }
 
@@ -255,6 +295,16 @@ namespace swpumc.Controls.DownloadCenter
                 _ = LoadFabricVersionsAsync();
                 _ = LoadQuiltVersionsAsync();
             }
+        }
+
+        /// <summary>
+        /// 当选中Tab时更新选择状态
+        /// </summary>
+        partial void OnSelectedVersionTabChanged(VersionTabViewModel? value)
+        {
+            IsOptifineSelected = value?.Content == "Optifine";
+            IsFabricSelected = value?.Content == "Fabric";
+            IsQuiltSelected = value?.Content == "Quilt";
         }
 
         /// <summary>

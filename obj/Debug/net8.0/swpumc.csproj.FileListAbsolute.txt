@@ -160,3 +160,4 @@ C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\refint\swpumc.dll
 C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\swpumc.pdb
 C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\swpumc.genruntimeconfig.cache
 C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\ref\swpumc.dll
+C:\Users\20742\source\repos\swpumc\obj\Debug\net8.0\swpumc.sourcelink.json

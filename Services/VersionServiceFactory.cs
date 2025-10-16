@@ -19,6 +19,9 @@ public class VersionServiceFactory
     private readonly IJavaEnvironmentService _javaEnvironmentService;
     private readonly Dictionary<string, IVersionService> _services;
     private readonly MinecraftVersionService _minecraftVersionService;
+    private static string _cachedMinecraftFolder;
+    private static string _cachedJavaPath;
+    private static bool _isInitialized = false; // 添加初始化状态标志
 
     public VersionServiceFactory(IConfigService configService, IJavaEnvironmentService javaEnvironmentService, MinecraftVersionService minecraftVersionService)
     {
@@ -36,9 +39,29 @@ public class VersionServiceFactory
     /// <returns>版本服务实例</returns>
     public IVersionService GetService(string versionType)
     {
-        return _services.TryGetValue(versionType.ToLower(), out var service) 
-            ? service 
-            : throw new ArgumentException($"不支持的版本类型: {versionType}");
+        var lowerVersionType = versionType.ToLower();
+        
+        // 确保服务已初始化
+        if (!_isInitialized)
+        {
+            InitializeServices();
+        }
+        
+        if (_services.TryGetValue(lowerVersionType, out var service))
+        {
+            return service;
+        }
+        
+        // 如果仍未找到服务，尝试强制重新初始化一次
+        _isInitialized = false;
+        InitializeServices();
+        
+        if (_services.TryGetValue(lowerVersionType, out var retryService))
+        {
+            return retryService;
+        }
+        
+        throw new ArgumentException($"不支持的版本类型: {versionType}");
     }
 
     /// <summary>
@@ -47,28 +70,58 @@ public class VersionServiceFactory
     /// <returns>版本类型列表</returns>
     public IEnumerable<string> GetSupportedVersionTypes()
     {
+        // 确保服务已初始化
+        if (!_isInitialized)
+        {
+            InitializeServices();
+        }
+        
         return _services.Keys;
     }
-
+    
+    /// <summary>
+    /// 诊断服务工厂状态
+    /// </summary>
+    public void Diagnose()
+    {
+        Console.WriteLine($"[VersionServiceFactory] 诊断信息: 初始化={_isInitialized}, 服务数={_services.Count}, 类型=[{string.Join(", ", _services.Keys)}]");
+    }
+    
     /// <summary>
     /// 初始化所有版本服务
     /// </summary>
     private void InitializeServices()
     {
+        // 检查是否已经初始化
+        if (_isInitialized)
+        {
+            return;
+        }
+        
         // 获取正确的Minecraft文件夹路径
-        var minecraftFolder = GetMinecraftFolderPath();
-        var javaPath = GetJavaPath();
+        _cachedMinecraftFolder = GetMinecraftFolderPath();
+        _cachedJavaPath = GetJavaPath();
         
-        Console.WriteLine($"[VersionServiceFactory] 使用Minecraft文件夹: {minecraftFolder}");
-        Console.WriteLine($"[VersionServiceFactory] 使用Java路径: {javaPath}");
-        
-        // 使用现有的MinecraftVersionService作为原版服务
-        _services["vanilla"] = new MinecraftVersionServiceWrapper(_minecraftVersionService);
-        _services["forge"] = new ForgeVersionServiceWrapper(new ForgeVersionService(minecraftFolder, javaPath));
-        _services["neoforge"] = new ForgeVersionServiceWrapper(new ForgeVersionService(minecraftFolder, javaPath));
-        _services["fabric"] = new FabricVersionServiceWrapper(new FabricVersionService(minecraftFolder));
-        _services["quilt"] = new QuiltVersionServiceWrapper(new QuiltVersionService(minecraftFolder));
-        _services["optifine"] = new OptifineVersionServiceWrapper(new OptifineVersionService(minecraftFolder, javaPath));
+        try
+        {
+            // 使用现有的MinecraftVersionService作为原版服务
+            _services["vanilla"] = new MinecraftVersionServiceWrapper(_minecraftVersionService);
+            _services["forge"] = new ForgeVersionServiceWrapper(new ForgeVersionService(_cachedMinecraftFolder, _cachedJavaPath));
+            _services["neoforge"] = new ForgeVersionServiceWrapper(new ForgeVersionService(_cachedMinecraftFolder, _cachedJavaPath));
+            _services["fabric"] = new FabricVersionServiceWrapper(new FabricVersionService(_cachedMinecraftFolder));
+            _services["quilt"] = new QuiltVersionServiceWrapper(new QuiltVersionService(_cachedMinecraftFolder));
+            _services["optifine"] = new OptifineVersionServiceWrapper(new OptifineVersionService(_cachedMinecraftFolder, _cachedJavaPath));
+            
+            // 标记为已初始化
+            _isInitialized = true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[VersionServiceFactory] 初始化服务时发生异常: {ex.Message}");
+            // 重置初始化状态，以便下次重试
+            _isInitialized = false;
+            _services.Clear();
+        }
     }
     
     /// <summary>
@@ -76,6 +129,12 @@ public class VersionServiceFactory
     /// </summary>
     public string GetMinecraftFolderPath()
     {
+        // 如果已经有缓存的路径，直接返回
+        if (!string.IsNullOrEmpty(_cachedMinecraftFolder))
+        {
+            return _cachedMinecraftFolder;
+        }
+        
         // 1. 优先使用用户配置的Minecraft路径（如果存在）
         var userMinecraftPath = GetUserMinecraftPath();
         if (!string.IsNullOrEmpty(userMinecraftPath) && Directory.Exists(userMinecraftPath))
@@ -177,6 +236,12 @@ public class VersionServiceFactory
     /// </summary>
     private string GetJavaPath()
     {
+        // 如果已经有缓存的Java路径，直接返回
+        if (!string.IsNullOrEmpty(_cachedJavaPath))
+        {
+            return _cachedJavaPath;
+        }
+        
         Console.WriteLine("[VersionServiceFactory] 开始获取Java路径");
         
         // 1. 优先使用配置的默认Java路径

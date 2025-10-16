@@ -8,7 +8,7 @@
     "**/platforms"
   ],
   "baseUrl": "https://littleskin.cn/api/yggdrasil",
-  "currentUser": "2074288854@qq.com",
+  "currentUser": "offline_4444@local",
   "users": [
     {
       "email": "2074288854@qq.com",
@@ -64,8 +64,8 @@
       "avatar": 0,
       "score": 0,
       "permission": 1,
-      "last_sign_at": "2025-10-03 22:00:51",
-      "register_at": "2025-10-03 22:00:51",
+      "last_sign_at": "2025-10-17 01:56:57",
+      "register_at": "2025-10-17 01:56:57",
       "verified": true,
       "accessToken": "",
       "clientToken": "",

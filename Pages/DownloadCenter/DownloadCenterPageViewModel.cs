@@ -33,6 +33,7 @@ public class DownloadCenterPageViewModel : BaseViewModel, INotifyPropertyChanged
     private int _currentPage = 0;
     private bool _isLoadingMore = false;
     private bool _hasMorePages = true;
+
     public ObservableCollection<MinecraftVersion> Versions
     {
         get => _displayedVersions;
@@ -75,7 +76,6 @@ public class DownloadCenterPageViewModel : BaseViewModel, INotifyPropertyChanged
         set => SetProperty(ref _hasMorePages, value);
     }
 
-    public ICommand RefreshVersionsCommand { get; }
     public ICommand FilterVersionsCommand { get; }
     public ICommand LoadMoreVersionsCommand { get; }
 
@@ -84,7 +84,6 @@ public class DownloadCenterPageViewModel : BaseViewModel, INotifyPropertyChanged
         Console.WriteLine($"[DownloadCenterPageViewModel] 构造函数开始 - 时间: {DateTime.Now:HH:mm:ss.fff}");
         
         _versionService = versionService;
-        RefreshVersionsCommand = new AsyncRelayCommand(RefreshVersionsAsync);
         FilterVersionsCommand = new RelayCommand(FilterVersions);
         LoadMoreVersionsCommand = new AsyncRelayCommand(LoadMoreVersionsAsync);
         
@@ -146,41 +145,6 @@ public class DownloadCenterPageViewModel : BaseViewModel, INotifyPropertyChanged
             await Dispatcher.UIThread.InvokeAsync(() => IsLoading = false);
         }
         Console.WriteLine($"[LoadVersionsAsync] 方法结束 - 时间: {DateTime.Now:HH:mm:ss.fff}");
-    }
-
-    private async Task RefreshVersionsAsync()
-    {
-        try
-        {
-            // 立即在UI线程设置加载状态
-            IsLoading = true;
-            
-            // 在后台线程执行刷新请求
-            await Task.Run(async () => await _versionService.RefreshVersionsAsync());
-            
-            // 重新获取版本数据
-            var versions = await Task.Run(async () => await _versionService.GetAllVersionsAsync());
-            
-            // 在UI线程更新UI
-            await Dispatcher.UIThread.InvokeAsync(() =>
-            {
-                Versions.Clear();
-                
-                foreach (var version in versions)
-                {
-                    Versions.Add(version);
-                }
-                
-                UpdateCounts();
-                IsLoading = false;
-            });
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"刷新版本失败: {ex.Message}");
-            // 确保在异常情况下也重置加载状态
-            await Dispatcher.UIThread.InvokeAsync(() => IsLoading = false);
-        }
     }
 
     private async Task LoadMoreVersionsAsync()
